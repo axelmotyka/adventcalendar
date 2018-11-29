@@ -16,7 +16,7 @@ Meine Empfehlung:
 
 # Exercises
 Every exercise is build up a an implementation and a JUnit test, like:
-[Exercise01.java](./src/main/java/Exercise01.java) and [Exercise01Test.java](./src/test/java/Exercise01Test.java)
+[Exercise01.java](./src/main/java/week01/exercise01/Exercise01.java) and [Exercise01Test.java](./src/test/java/week01/exercise01/Exercise01Test.java)
 You must complete the implementation and the test, check also that the predefined Tests are correct (sometimes iam also doing mistakes!).
 Add additional test cases (methods) to complete every aspect of your task.
 You can easily run those Tests by using IntelliJ or Visual Studio Code(add `Java Extension Pack` extension to VSCode). But you must always install the JDK 1.8.0. On MacOs this should be already installed!
