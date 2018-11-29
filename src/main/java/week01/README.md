@@ -7,10 +7,12 @@ Die Aufgaben entsprechen ähnlichen Aufgaben aus dem Bereich "Programmieren I", 
 Um diese Grundlagen zu erlernen, könnt Ihr natürlich alle Hilfsmittel verwenden - ob Ihr damit auch wirklich lernt?
 
 Meine Empfehlung:
-* Nutzt kein Google, Youtube, Stackoverflow, etc!
+* Nutzt kein Google, Youtube, Stackoverflow, Frage-Antwort-Spiele mit Experten, etc!
 * Erarbeitet Euch die Aufgaben mittels Java Büchern, wie [Java ist auch eine Insel](http://openbook.rheinwerk-verlag.de/javainsel/), selbst!
 * Setzt Euch eine Deadline für die Aufgabe!
 * Kopierte Lösung sind klar zu sehen und bringen Euch nicht weiter!
+* Habt Ihr grundsätzliche Fragen "wie führe ich die Tests aus", "ich verstehe den BubbleSort nicht" oder ähnliches - geht auf Eure Buddies zu. Aber versucht die Programmierung selbst zu erledigen und die Grundlagen dafür auch selbst zu erarbeiten!
+* Keine Angst vor falschen oder unvollständigen Lösungen - wir alle lernen am meisten durch unsere Fehler!
 
 ## Week 1 - 03.12. - 07.12.
 
