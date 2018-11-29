@@ -12,3 +12,8 @@ Meine Empfehlung:
 * Setzt Euch eine Deadline für die Aufgabe!
 * Kopierte Lösung sind klar zu sehen und bringen Euch nicht weiter!
 
+# ## Week 1 - 03.12. - 07.12.
+[Goto](./src/main/week01)
+
+# Week 2 - 10.12. - 14.12.
+[Goto](./src/main/week02)
