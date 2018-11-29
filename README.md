@@ -14,7 +14,7 @@ Meine Empfehlung:
 * Habt Ihr grundsätzliche Fragen "wie führe ich die Tests aus", "ich verstehe den BubbleSort nicht" oder ähnliches - geht auf Eure Buddies zu. Aber versucht die Programmierung selbst zu erledigen und die Grundlagen dafür auch selbst zu erarbeiten!
 * Keine Angst vor falschen oder unvollständigen Lösungen - wir alle lernen am meisten durch unsere Fehler!
 
-# Excercises
+# Exercises
 Every exercise is build up a an implementation and a JUnit test, like:
 [Exercise01.java](./src/main/java/Exercise01.java) and [Exercise01Test.java](./src/test/java/Exercise01Test.java)
 You must complete the implementation and the test, check also that the predefined Tests are correct (sometimes iam also doing mistakes!).
