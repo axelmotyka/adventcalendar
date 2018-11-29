@@ -102,7 +102,7 @@ The following arithmetic operations are allowed: `+`, `-`, `*`, `/`, `^2(x)` and
 Check the right order by using parentheses. 
 The result should be rounded off to the second decimal place.
 
-Setup a function for every aritmethic operation and write tests for them.
+Setup a method for every aritmethic operation and write tests for them.
 The input are Strings like this:
 *  `"1+1"` = `2`
 *  `"10 * 20 + 30"` = `230`

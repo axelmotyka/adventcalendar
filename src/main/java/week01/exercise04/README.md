@@ -1,0 +1,2 @@
+### Exercise 04 - Longest Word
+Take the _text_ parameter being passed and return the longest word in the string. If there are two or more words that are the same length, return the first word from the string with that length. Ignore punctuation and assume _text_ will not be empty.
