@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import week01.excercise01.Exercise01;
+import week01.exercise01.Exercise01;
 
 public class Exercise01Test {
 
