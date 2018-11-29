@@ -1,4 +1,4 @@
-package week01.excercise01;
+package week01.exercise01;
 
 /**
  * Test for "Hello DevAcademy!"
