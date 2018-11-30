@@ -21,6 +21,22 @@ You must complete the implementation and the test, check also that the predefine
 Add additional test cases (methods) to complete every aspect of your task.
 You can easily run those Tests by using IntelliJ or Visual Studio Code(add `Java Extension Pack` extension to VSCode). But you must always install the JDK 1.8.0. On MacOs this should be already installed!
 
+# Branches
+| username      |branch         |
+| ------------- |:-------------:|
+| chrispaj | chris|
+| pegeme| peter |
+| sylviagonschior | sylvia |
+| flesch-04-18 | friedel |
+| axcce1erat | axel |
+| steffilankes| steffi |
+| halil234 | halil |
+| ? | ? |
+| ? | ? |
+| ? | ? |
+| ? | ? |
+| ? | ? |
+
 # Week 1 - 03.12. - 07.12.
 [Goto](./src/main/java/week01)
 
