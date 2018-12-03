@@ -13,5 +13,13 @@ public class Exercise02Test {
 
         assertEquals("String is not capitalized!", "Hello DevAcademy This Text Should Be Capitalized", tester.run(text));
     }
+    @Test
+    public void runMethodReturnsCapitalizedString2() {
+        Exercise02 tester = new Exercise02();
+        String text = "Hello devAcademy this text should be capitalized";
+
+        assertEquals("String is not capitalized!", "Hello DevAcademy This Text Should Be Capitalized", tester.run2(text));
+    }
+
 
 }
