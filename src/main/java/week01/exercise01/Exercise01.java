@@ -8,7 +8,8 @@ package week01.exercise01;
 public class Exercise01 {
 
     public String run() {
-        System.out.println("HelloDevAcademy");
+        System.out.println("Hello DevAcademy!");
+
 
         return "HelloDevAcademy" ;
     }
