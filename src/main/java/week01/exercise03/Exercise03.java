@@ -16,6 +16,6 @@ public class Exercise03 {
         int t = Integer.parseInt(time);
         int h = t / 60;
         int m = t % 60;
-        return h+":"+m;
+        return h + ":" + m;
     }
 }
