@@ -15,6 +15,21 @@ public class Exercise05 {
     public String run(String text) {
         log.info(String.format("Run(\"%s\")", text));
 
-        return text;
+        String vowels = "aeiou";
+        StringBuilder result = new StringBuilder();
+
+        for (int i = 0; i < text.length(); i++) {
+            int code = text.charAt(i);
+            if (code >= 65 && code <= 90 || code >= 97 && code <= 122) {
+                code++;
+                if (code == 123 || code == 91)
+                    code -= 26;
+                if (vowels.indexOf((char)code)>-1)
+                    code -= 32;
+            }
+            result.append((char)code);
+        }
+
+        return result.toString();
     }
 }
