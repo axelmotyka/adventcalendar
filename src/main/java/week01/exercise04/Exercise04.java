@@ -16,6 +16,26 @@ public class Exercise04 {
     public String run(String text) {
         log.info(String.format("Run(\"%s\")", text));
 
-        return text;
+        int maxLengthSoFar = -1;
+        int lastWordStartIndex = 0;
+        int len = text.length();
+        int currentWordLength = 0;
+        String longestWordSoFar = "";
+
+        for (int pos = 0; pos < len; pos++) {
+            char c = text.charAt(pos);
+            if (Character.isLetter(c))
+                currentWordLength++;
+            if (Character.isWhitespace(c) || (pos == len-1)) {
+                if (currentWordLength > maxLengthSoFar) {
+                    longestWordSoFar = text.substring(lastWordStartIndex, lastWordStartIndex + currentWordLength);
+                    maxLengthSoFar = currentWordLength;
+                }
+                lastWordStartIndex = pos+1;
+                currentWordLength = 0;
+            }
+        }
+
+        return longestWordSoFar;
     }
 }
