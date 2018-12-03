@@ -24,14 +24,14 @@ public class Exercise03Test {
     public void runMethodTest3() {
         Exercise03 tester = new Exercise03();
 
-        assertEquals("Not correctly converted!", "0", tester.run("0"));
+        assertEquals("Not correctly converted!", "0:0", tester.run("0"));
     }
 
     @Test
     public void runMethodTest4() {
         Exercise03 tester = new Exercise03();
 
-        assertEquals("Not correctly converted!", "1", tester.run("60"));
+        assertEquals("Not correctly converted!", "1:0", tester.run("60"));
     }
 
 }

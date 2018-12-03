@@ -13,7 +13,9 @@ public class Exercise03 {
 
     public String run(String time) {
         log.info(String.format("Run(\"%s\")", time));
-
-        return time;
+        int t = Integer.parseInt(time);
+        int h = t / 60;
+        int m = t % 60;
+        return h+":"+m;
     }
 }
