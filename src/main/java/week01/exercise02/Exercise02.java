@@ -1,6 +1,9 @@
 package week01.exercise02;
 
 
+import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.text.WordUtils;
+
 import java.util.logging.Logger;
 
 /**
@@ -18,3 +21,4 @@ public class Exercise02 {
         return text;
     }
 }
+

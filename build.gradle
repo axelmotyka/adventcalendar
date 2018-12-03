@@ -1,6 +1,9 @@
+
 plugins {
     id 'java'
 }
+
+apply plugin: 'idea'
 
 group 'de.telekom.devacademy'
 version '1.0-SNAPSHOT'
@@ -13,4 +16,6 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
+
 }
