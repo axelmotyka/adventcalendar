@@ -15,13 +15,24 @@ public class Exercise06 {
     public int[][] run(int[][] x, int[][] y) {
         log.info("Run()");
 
-        int[][] result = new int[][]{
-                { 6, 14, 24, 36, 50 },
-                { 50, 24, 21, 16, 9 },
-                { 36, 30, 18, 7, 40 },
-                { 24, 18, 10, 30, 28 },
-                { 14, 8, 45, 40, 18 }
-        };
+        int xRows = x.length;
+        int xCols = x[0].length;
+        int[][] result = new int[xRows][xCols];
+
+        if (y.length != xRows || y[0].length != xCols) {
+            log.warning("Matrix sizes do not match");
+            return null;
+        }
+
+        for (int row = 0; row < xRows; row++) {
+            if (y[row].length != x[row].length) {
+                log.warning("Matrix sizes do not match");
+                return null;
+            }
+            for (int col = 0; col < xCols; col++) {
+                result[row][col] = x[row][col] * y[row][col];
+            }
+        }
 
         return result;
     }
