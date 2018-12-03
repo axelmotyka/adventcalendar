@@ -15,6 +15,19 @@ public class Exercise02 {
     public String run(String text) {
         log.info(String.format("Run(\"%s\")", text));
 
-        return text;
+        if (text.trim() != text)
+            log.warning("Argument contains leading/trailing whitespace, may cause exception!");
+
+        String result = "";
+
+        for (int i=0; i<text.length(); i++) {
+            if (text.charAt(i) == ' ') {
+                result += " " + Character.toUpperCase(text.charAt(++i));
+            } else {
+                result += text.charAt(i);
+            }
+        }
+
+        return result;
     }
 }
