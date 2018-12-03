@@ -33,9 +33,10 @@ You can easily run those Tests by using IntelliJ or Visual Studio Code(add `Java
 | halil234 | halil |
 | arnolde | ethan |
 | michael-k4 | michael |
+| mesutcevik | mesut |
+| fldtag | falk |
 | ? | ? |
-| ? | ? |
-| ? | ? |
+
 
 # Week 1 - 03.12. - 07.12.
 [Goto](./src/main/java/week01)

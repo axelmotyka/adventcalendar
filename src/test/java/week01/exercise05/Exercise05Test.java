@@ -12,7 +12,7 @@ public class Exercise05Test {
 
         String text = "hello";
 
-        assertEquals("Letters are wrong!", "ifmmp", tester.run(text));
+        assertEquals("Letters are wrong!", "Ifmmp", tester.run(text));
     }
 
     @Test
