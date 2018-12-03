@@ -14,6 +14,26 @@ public class Exercise03 {
     public String run(String time) {
         log.info(String.format("Run(\"%s\")", time));
 
+        String minutes;
+
+        String seconds;
+
+        minutes = String.valueOf(Integer.parseInt(time) / 60);
+
+
+        seconds = String.valueOf(Integer.parseInt(time) % 60);
+
+        if (seconds.equals("0"))
+        {
+            seconds="" ;
+        }
+        else
+        {
+            seconds = ":" + seconds;
+        }
+        time = minutes  + seconds;
+
+        System.out.println(time);
         return time;
     }
 }

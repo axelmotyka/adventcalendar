@@ -17,7 +17,7 @@ public class Exercise03Test {
     public void runMethodTest2() {
         Exercise03 tester = new Exercise03();
 
-        assertEquals("Not correctly converted!", "0:46", tester.run("45"));
+        assertEquals("Not correctly converted!", "0:45", tester.run("45"));
     }
 
     @Test

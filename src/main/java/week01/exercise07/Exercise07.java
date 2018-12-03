@@ -1,5 +1,7 @@
 package week01.exercise07;
 
+import sun.jvm.hotspot.debugger.posix.elf.ELFSectionHeader;
+
 import java.util.HashMap;
 
 /**
@@ -17,7 +19,41 @@ public class Exercise07 {
      * @return HashMap, Like: {[a]=[c], [b]=[d], [c]=[e]}
      */
     public HashMap<String,String> generateCipher(int offset) {
-        return new HashMap<String,String>();
+        // learn how how a haschmap works
+
+        HashMap<String, String> hmap = new HashMap<String, String>();
+
+        hmap.put("1", "e");
+
+
+
+        int firstCharacter=97;
+
+        char originalChar ;
+
+        int offsetcalc ;
+
+        for (int i = 0 ; i <= 25 ; i++)
+        {
+            originalChar=(char)firstCharacter;
+
+            if (firstCharacter>=(123-offset))
+            {
+                offsetcalc = offset -  (122 - firstCharacter) ;
+                firstCharacter = 96 + offsetcalc;
+            }
+
+
+
+
+
+
+            System.out.println(originalChar);
+            hmap.put(Character.toString(originalChar), Character.toString(originalChar));
+        }
+
+
+        return hmap;
     };
 
     /**

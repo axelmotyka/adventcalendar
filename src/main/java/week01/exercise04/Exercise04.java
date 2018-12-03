@@ -16,6 +16,23 @@ public class Exercise04 {
     public String run(String text) {
         log.info(String.format("Run(\"%s\")", text));
 
-        return text;
+        //Clean the text from special characters
+        text = text.replaceAll("[^\\w]"," ");
+        //Split the text into array
+        String textarray[] = text.split("\\s+");
+        // need one variable to store the greatest element of the array.
+        int greatestArray=0;
+
+
+        for( int x = 0; x < textarray.length; x++ )
+        {
+            if (textarray[x].length() > textarray[greatestArray].length())
+            {
+                greatestArray=x;
+            }
+
+        }
+        return textarray[greatestArray];
+
     }
 }
