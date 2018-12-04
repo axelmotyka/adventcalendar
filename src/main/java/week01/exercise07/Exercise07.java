@@ -1,6 +1,9 @@
 package week01.exercise07;
 
+import week01.exercise06.Exercise06;
+
 import java.util.HashMap;
+import java.util.logging.Logger;
 
 /**
  * Caesar cipher
@@ -10,14 +13,24 @@ import java.util.HashMap;
  *
  */
 public class Exercise07 {
+    private static final Logger log = Logger.getLogger( Exercise07.class.getName() );
 
     /**
      * Generate the cipher as a HashMap.
      * @param offset offset for the alphabet cipher
      * @return HashMap, Like: {[a]=[c], [b]=[d], [c]=[e]}
      */
-    public HashMap<String,String> generateCipher(int offset) {
-        return new HashMap<String,String>();
+    public HashMap<Character,Character> generateCipher(int offset) {
+        HashMap h = new HashMap<Character,Character>();
+        int overflow = 0;
+        int result = 0;
+        for (int i=65; i<=90; i++) {
+            if ((i + offset) > 90) overflow = -26;
+            result = i + offset + overflow;
+            h.put((char)i, (char)(result));
+            h.put((char)(i + 32), (char)(result + 32));
+        }
+        return h;
     };
 
     /**
