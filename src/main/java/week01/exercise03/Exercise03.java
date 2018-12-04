@@ -23,11 +23,7 @@ public class Exercise03 {
             }
             minutes = intTime - hours * 60;
 
-            if(minutes > 0) {
-                result = hours + ":" + minutes;
-            } else {
-                result = String.valueOf(hours);
-            }
+            result = hours + ":" + minutes;
         }
 
         return result;
