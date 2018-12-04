@@ -16,6 +16,16 @@ public class Exercise04 {
     public String run(String text) {
         log.info(String.format("Run(\"%s\")", text));
 
-        return text;
+        text = text.replaceAll("[^a-zA-Z ]", "");
+        String[] wordSort = text.split(" ");
+        String result = "";
+
+        for (int i = 0; i < wordSort.length; i++) {
+            if (wordSort[i].length() > result.length()) {
+                result = wordSort[i];
+            }
+        }
+        return result;
     }
 }
+
