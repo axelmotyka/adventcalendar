@@ -11,7 +11,7 @@ public class Exercise02Test {
         Exercise02 tester = new Exercise02();
         String text = "Hello devAcademy this text should be capitalized";
 
-        assertEquals("Hello DevAcademy This Text Should Be Capitalized", tester.run(text));
+        assertEquals("Not correctly converted!", "Hello DevAcademy This Text Should Be Capitalized", tester.run(text));
     }
 
 }
