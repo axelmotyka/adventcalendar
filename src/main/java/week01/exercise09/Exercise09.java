@@ -16,6 +16,22 @@ public class Exercise09 {
     public String run(String text) {
         log.info(String.format("Run(\"%s\")", text));
 
-        return new String();
+        char[] textArray = {};
+        for (int i=0; i<text.length(); i++)
+            textArray[i] = text.charAt(i);
+
+        return QuickSort(textArray).toString();
+    }
+
+    private char[] QuickSort(char[] textArray) {
+        int L = 0;
+        int R = textArray.length;
+        int temp;
+
+        while (L<R) {
+            
+        }
+
+        return textArray;
     }
 }
