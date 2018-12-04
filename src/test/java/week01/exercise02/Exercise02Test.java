@@ -20,6 +20,4 @@ public class Exercise02Test {
 
         assertEquals("String is not capitalized!", "Hello DevAcademy This Text Should Be Capitalized", tester.run2(text));
     }
-
-
 }
