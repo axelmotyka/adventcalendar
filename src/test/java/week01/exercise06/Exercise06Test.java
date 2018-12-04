@@ -3,8 +3,62 @@ package week01.exercise06;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
+import static org.junit.Assert.assertArrayEquals;
 
 public class Exercise06Test {
+
+    @Test
+    public void emptyOuterArraysTest() {
+        Exercise06 tester = new Exercise06();
+        int[][] x = new int[][]{};
+        int[][] y = new int[][]{};
+
+        assertNull(tester.run(x, y));
+    }
+
+    @Test
+    public void emptyInnerArraysTest() {
+        Exercise06 tester = new Exercise06();
+        int[][] x = new int[][]{{}};
+        int[][] y = new int[][]{{}};
+
+        assertNull(tester.run(x, y));
+    }
+
+    @Test
+    public void oneLineTest() {
+        Exercise06 tester = new Exercise06();
+        int[][] x = new int[][]{
+                {0, 1}
+        };
+        int[][] y = new int[][]{
+                {2, 3}
+        };
+
+        int[][] expected = new int[][]{
+                {0, 3}
+        };
+        assertArrayEquals(expected, tester.run(x, y));
+    }
+
+    @Test
+    public void smallArrayTest() {
+        Exercise06 tester = new Exercise06();
+        int[][] x = new int[][]{
+                {0, 1},
+                {2, 3}
+        };
+        int[][] y = new int[][]{
+                {4, 5},
+                {6, 7}
+        };
+
+        int[][] expected = new int[][]{
+                {0, 5},
+                {12, 21}
+        };
+        assertArrayEquals(expected, tester.run(x, y));
+    }
 
     @Test
     public void runMethodTest() {
@@ -29,7 +83,7 @@ public class Exercise06Test {
         int[][] expected = new int[][]{
                 { 6, 14, 24, 36, 50 },
                 { 50, 24, 21, 16, 9 },
-                { 36, 30, 18, 7, 40 },
+                { 36, 30, 12, 7, 40 },
                 { 24, 18, 10, 30, 28 },
                 { 14, 8, 45, 40, 18 }
         };

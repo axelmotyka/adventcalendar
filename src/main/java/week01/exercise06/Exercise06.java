@@ -13,15 +13,20 @@ public class Exercise06 {
     private static final Logger log = Logger.getLogger( Exercise06.class.getName() );
 
     public int[][] run(int[][] x, int[][] y) {
-        log.info("Run()");
 
-        int[][] result = new int[][]{
-                { 6, 14, 24, 36, 50 },
-                { 50, 24, 21, 16, 9 },
-                { 36, 30, 18, 7, 40 },
-                { 24, 18, 10, 30, 28 },
-                { 14, 8, 45, 40, 18 }
-        };
+        if(x.length == 0 || y.length == 0 || x[0].length == 0 || y[0].length == 0)
+            return null;
+
+        int xAxisLen = x[0].length;
+        int yAxisLen = x.length;
+
+        int[][] result = new int[yAxisLen][xAxisLen];
+
+        for(int yIndex = 0; yIndex < yAxisLen; yIndex++) {
+            for(int xIndex = 0; xIndex < xAxisLen; xIndex++) {
+                result[yIndex][xIndex] = x[yIndex][xIndex] * y[yIndex][xIndex];
+            }
+        }
 
         return result;
     }

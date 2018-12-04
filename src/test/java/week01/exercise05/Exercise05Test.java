@@ -24,4 +24,14 @@ public class Exercise05Test {
         assertEquals("Letters are wrong!", "gvO Ujnft!", tester.run(text));
 
     }
+
+    @Test
+    public void testForZ() {
+        Exercise05 tester = new Exercise05();
+
+        String text = "zZ";
+
+        assertEquals("Letters are wrong!", "zZ", tester.run(text));
+
+    }
 }
