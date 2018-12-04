@@ -13,8 +13,8 @@ public class Exercise02 {
     private static final Logger log = Logger.getLogger( Exercise02.class.getName() );
 
     public String run(String text) {
-        log.info(String.format("Run(\"%s\")", text));
+        log.info(String.format("Run(\"%s\")", text.toUpperCase()));
 
-        return text;
+        return text.toUpperCase();
     }
 }
