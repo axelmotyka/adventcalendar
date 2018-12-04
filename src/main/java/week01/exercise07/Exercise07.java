@@ -17,8 +17,20 @@ public class Exercise07 {
      * @param offset offset for the alphabet cipher
      * @return HashMap, Like: {[a]=[c], [b]=[d], [c]=[e]}
      */
-    public HashMap<String,String> generateCipher(int offset) {
-        return new HashMap<String,String>();
+    public HashMap<Character,Character> generateCipher(int offset) {
+
+        char a = 'A';
+        char b = 'B';
+        char z = 'Z';
+        System.out.println(Integer.valueOf(a));
+        System.out.println(Integer.valueOf(b));
+        System.out.println(Integer.valueOf(z));
+        HashMap<Character, Character> cipher = new HashMap<>();
+        for(int i=65; i<=90; i++) {
+            cipher.put((char)i, (char)i);
+        }
+
+        return cipher;
     }
 
     /**
