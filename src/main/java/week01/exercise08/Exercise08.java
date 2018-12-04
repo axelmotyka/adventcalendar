@@ -8,8 +8,20 @@ package week01.exercise08;
  */
 public class Exercise08 {
 
-    public int[] run(int[] intArray) {
-        return new int[] {};
+    public int[] run(int[] toSort) {
+
+        int len = toSort.length;
+
+        for (int i=0; i<(len-1); i++) {
+            for (int j=0; j<len-1-i; j++) {
+                if (toSort[j] > toSort[j+1]) {
+                    int temp = toSort[j+1];
+                    toSort[j+1] = toSort[j];
+                    toSort[j] = temp;
+                }
+            }
+        }
+        return toSort;
     }
 
 }
