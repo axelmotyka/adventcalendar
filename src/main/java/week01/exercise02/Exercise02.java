@@ -22,7 +22,7 @@ public class Exercise02 {
                 textCap.append(' ');
             }
         }
-        String textCapt = textCap.toString();
-        return textCapt;
+        text = textCap.toString();
+        return text;
     }
 }
