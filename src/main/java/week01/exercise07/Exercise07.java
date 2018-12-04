@@ -3,6 +3,7 @@ package week01.exercise07;
 import week01.exercise06.Exercise06;
 
 import java.util.HashMap;
+import java.util.function.BiConsumer;
 import java.util.logging.Logger;
 
 /**
@@ -21,6 +22,9 @@ public class Exercise07 {
      * @return HashMap, Like: {[a]=[c], [b]=[d], [c]=[e]}
      */
     public HashMap<Character,Character> generateCipher(int offset) {
+        if (offset < 0 || offset > 25) {
+            throw new IllegalArgumentException("offset out of bounds");
+        }
         HashMap h = new HashMap<Character,Character>();
         int overflow = 0;
         int result = 0;
@@ -39,15 +43,15 @@ public class Exercise07 {
      * @return
      */
     public String encryptString(String message, HashMap cipher) {
-        String result = "";
+        StringBuilder result = new StringBuilder();
         char c;
         for (int i=0; i<message.length(); i++) {
             c = message.charAt(i);
             if (Character.isLetter(c))
                 c = (char)cipher.get(c);
-            result += c;
+            result.append(c);
         }
-        return result;
+        return result.toString();
     }
 
     /**
@@ -56,7 +60,13 @@ public class Exercise07 {
      * @return
      */
     public String decryptString(String encryptedMessage, HashMap cipher) {
-        return new String();
+
+        HashMap reverseMap = new HashMap<Character,Character>();
+        BiConsumer<Character,Character> action = (key, value) -> reverseMap.put(value, key);
+        cipher.forEach( action );
+
+        String result = encryptString(encryptedMessage, reverseMap);
+        return result;
     }
 
     /**
@@ -65,6 +75,9 @@ public class Exercise07 {
      * @return
      */
     public String run(int offset, String message) {
-        return new String();
+
+        Exercise07 exercise07 = new Exercise07();
+        HashMap hm = exercise07.generateCipher(offset);
+        return exercise07.encryptString(message, hm);
     }
 }
