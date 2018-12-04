@@ -44,4 +44,15 @@ public class Exercise06Test {
 
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void exceptionIfSizeMismatch() {
+        Exercise06 tester = new Exercise06();
+        int[][] a = new int [][]{{1,2},
+                                 {1,2,3}};
+        int[][] b = new int [][]{{1,2,3},
+                                 {1,2}};
+        int[][] result = tester.run(a, b);
+        fail("run method did not throw exception");
+    }
+
 }

@@ -19,16 +19,14 @@ public class Exercise06 {
         int xCols = x[0].length;
         int[][] result = new int[xRows][xCols];
 
-        if (y.length != xRows || y[0].length != xCols) {
-            log.warning("Matrix sizes do not match");
-            return null;
-        }
+        if (y.length != xRows || y[0].length != xCols)
+            throw new IllegalArgumentException("Matrix sizes do not match");
 
         for (int row = 0; row < xRows; row++) {
-            if (y[row].length != x[row].length) {
-                log.warning("Matrix sizes do not match");
-                return null;
-            }
+
+            if (y[row].length != x[row].length)
+                throw new IllegalArgumentException("Matrix sizes do not match");
+
             for (int col = 0; col < xCols; col++) {
                 result[row][col] = x[row][col] * y[row][col];
             }
