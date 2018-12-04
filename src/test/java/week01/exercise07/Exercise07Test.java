@@ -10,7 +10,6 @@ public class Exercise07Test {
 
     @Test
     public void generateCipherTest() {
-
         Exercise07 tester = new Exercise07();
         HashMap h = tester.generateCipher(3);
         assertEquals('D', h.get('A'));
@@ -22,6 +21,8 @@ public class Exercise07Test {
     @Test
     public void encryptStringTest() {
         Exercise07 tester = new Exercise07();
+        HashMap h = tester.generateCipher(5);
+        assertEquals("Ymnx jchjwhnxj nx f unjhj tk Hfpj.", tester.encryptString("This excercise is a piece of Cake.", h));
     }
 
     @Test

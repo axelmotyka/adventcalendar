@@ -39,7 +39,15 @@ public class Exercise07 {
      * @return
      */
     public String encryptString(String message, HashMap cipher) {
-        return new String();
+        String result = "";
+        char c;
+        for (int i=0; i<message.length(); i++) {
+            c = message.charAt(i);
+            if (Character.isLetter(c))
+                c = (char)cipher.get(c);
+            result += c;
+        }
+        return result;
     }
 
     /**
