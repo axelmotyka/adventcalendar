@@ -13,17 +13,16 @@ public class Exercise02 {
 
     public String run(String text) {
 
-        String toUpperCaseFirstLetterOnly(String str) {
-            String[] words = str.split(" ");
-            StringBuilder ret = new StringBuilder();
-            for(int i = 0; i < words.length; i++) {
-                ret.append(Character.toUpperCase(words[i].charAt(0)));
-                ret.append(words[i].substring(1));
-                if(i < words.length - 1) {
-                    ret.append(' ');
-                }
+        String[] words = text.split(" ");
+        StringBuilder textCap = new StringBuilder();
+        for (int i = 0; i < words.length; i++) {
+            textCap.append(Character.toUpperCase(words[i].charAt(0)));
+            textCap.append(words[i].substring(1));
+            if (i < words.length - 1) {
+                textCap.append(' ');
             }
-            return ret.toString();
         }
+        String textCapt = textCap.toString();
+        return textCapt;
     }
 }
