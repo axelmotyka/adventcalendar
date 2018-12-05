@@ -24,7 +24,7 @@ public class Exercise03 {
             time = timeFormatted2;
         }
         else if (time == "60"){
-            String timeFormatted3 = "1";
+            String timeFormatted3 = "1:0";
             time = timeFormatted3;
         }
         return time;

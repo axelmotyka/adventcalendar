@@ -15,6 +15,6 @@ public class Exercise05 {
     public String run(String text) {
         log.info(String.format("Run(\"%s\")", text));
 
-        return text;
+      return text;
     }
 }

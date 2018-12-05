@@ -12,6 +12,6 @@ public class Exercise01Test {
     public void runIsReturningHelloDevAcademy() {
         Exercise01 tester = new Exercise01();
 
-        assertTrue("Run method is always returning true", tester.run());
+        assertEquals("Hello DevAcademy!", tester.run());
     }
 }
