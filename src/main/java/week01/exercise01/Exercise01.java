@@ -5,11 +5,13 @@ package week01.exercise01;
  *
  * Return `"HelloDevAcademy"` and assert the result in test `Exercise01Test`
  */
+// Klasse
 public class Exercise01 {
 
-    public boolean run() {
+    // Methode
+    public String run() {
         System.out.println("Hello DevAcademy!");
 
-        return true;
+        return "HelloDevAcademy";
     }
 }

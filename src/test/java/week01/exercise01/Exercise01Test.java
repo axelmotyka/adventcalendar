@@ -1,17 +1,19 @@
 package week01.exercise01;
 
-import static org.junit.Assert.*;
-
 import org.junit.Test;
 
-import week01.exercise01.Exercise01;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 
 public class Exercise01Test {
 
     @Test
     public void runIsReturningHelloDevAcademy() {
-        Exercise01 tester = new Exercise01();
+        Exercise01 exercise01 = new Exercise01();
 
-        assertFalse("Run method is always returning true", tester.run());
+        String expected = "HelloDevAcademy";
+        String actual = exercise01.run();
+
+        assertEquals(expected, actual);
     }
 }
