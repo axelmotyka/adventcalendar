@@ -11,8 +11,18 @@ import java.util.logging.Logger;
 public class Exercise03 {
     private static final Logger log = Logger.getLogger( Exercise03.class.getName() );
 
+    public Exercise03() {
+        log.info("Konstruktor");
+    }
+
+    public void testLogger() {
+        log.info("Bin in der testLogger()");
+    }
+
     public String run(String time) {
         log.info(String.format("Run(\"%s\")", time));
+
+        testLogger();
 
         return time;
     }
