@@ -23,4 +23,25 @@ public class Exercise09Test {
 
         assertEquals("Wrong result!", "aaaaaccddddeeeeeeghhhiiillmmnoorrrssstttttvyz", tester.run(message));
     }
+
+    @Test
+    public void specialSmallStringTest() {
+        Exercise09 tester = new Exercise09();
+
+        String message = "a";
+
+        assertEquals("Wrong result!", "a", tester.run(message));
+    }
+    @Test
+
+    public void veryLongStringTest() {
+        Exercise09 tester = new Exercise09();
+
+        String message = "efghugfeugugufegugfweugfuifeguifgfiugegfipugfiufgeiwgfgiwegip wgigiwghigighfguefgiufguegifgfigigifgig wig" +
+                "fgegffgfjfgegfkgfgjegföegfkjfgfkjegfkejwgfkjgkekewghkwghkwekgewkgkwghewgheiwhgioghkewghkewgkwehgewkghoeghgewewgkgekgezzzejvgjegewgewgekw" +
+                "gfjewgfegfggegheggehgeigewigegggewggwfaaaaccccccfffffefufgugiufqgfqugfiqgfgfqgfiugffqguqgfuqwgfpqgpqgffpqgfqpgqgfpqgfgqgfufuguqggfqgqgfqfpg" +
+                "gffggfqufgqwpfgpwqfpqgfqfqwzzzzzzgwfgfupfggpqgfpfugfwuguqgfqgfpqgfuqgwwqgfqwgufpwgffgffwfguqfqgfguiwgfifgfiwgfgfgffpgfgfwgfipqgfu";
+
+        assertEquals("Wrong result!", "aaaacccccceeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggghhhhhhhhhhhhhhhiiiiiiiiiiiiiiiiiiiiiiiiiiiiiijjjjjjjjjkkkkkkkkkkkkkkkkkkkooppppppppppppppppppqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqquuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuvwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwzzzzzzzzz", tester.run(message));
+    }
 }

@@ -36,6 +36,7 @@ public class Exercise02 {
         //Change the char array into string ...
         // I KNOW REGEX is also possible ... but that would be copying :)
         text = new String(chars);
+        System.out.println(text);
         return text;
     }
 }
