@@ -15,3 +15,22 @@ Meine Empfehlung:
 * Keine Angst vor falschen oder unvollständigen Lösungen - wir alle lernen am meisten durch unsere Fehler!
 
 ## Week 2 - 10.12. - 14.12.
+
+### Exercise  - Rennspiel Teil 
+
+(michal) Rennfahrer + planuml
+
+### Exercise  - Rennspiel Teil 
+
+(michal) Fahrzeug (Auto, Trike, Motorrad) hat irgendwelche Werte und einen Rennfahrer
+ + planuml
+ 
+### Exercise  - Rennspiel Teil 
+
+(michal) Startaufstellung sortieren (Qualifying)
+ + planuml
+ 
+### Exercise  - Rennspiel Teil 
+
+(axel) Rennen simulieren
+ + planuml
