@@ -14,13 +14,13 @@ public class Exercise03 {
     public String run(String time) {
         log.info(String.format("Run(\"%s\")", time));
         Integer newInt = new Integer( time );
-        int minutes = newInt/60;
-        int seconds = newInt-minutes*60;
+        int hours = newInt/60;
+        int minutes = newInt-hours*60;
 
-        if (minutes == 0 && seconds == 0)
+        if (hours == 0 && minutes == 0)
             time = "0";
         else
-                time = minutes + ":" + seconds;
+                time = hours + ":" + minutes;
         //System.out.println(newInt);
         //System.out.println(minutes);
         //System.out.println(seconds);
