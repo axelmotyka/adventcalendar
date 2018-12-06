@@ -15,8 +15,29 @@ package week01.exercise10;
  */
 public class Exercise10 {
 
-    public int run(String calculate) {
+    public int add(int a, int b) {
+        return a + b;
+    }
 
-        return 1;
+    public double minus(double a, double b) {
+        return a - b;
+    }
+
+    public double multiply(int a, double b) {
+        return a * b;
+    }
+
+    public double divide(double a, double b) {
+        return a/b;
+    }
+
+    public double run(String calculate) {
+
+        char[] calculateChars = calculate.toCharArray();
+
+        for(char c : calculateChars) {
+            if(Character.isDigit())
+        }
+
     }
 }

@@ -10,9 +10,9 @@ public class Exercise10TestValidation {
     public void calculateTest01() {
         Exercise10 tester = new Exercise10();
 
-        String calculate = "1+1";
+        String calculate = "1 + 1";
 
-        assertEquals("Wrong result!", 2, tester.run(calculate));
+        assertEquals("Wrong result!", 2, tester.run(calculate), 0);
     }
 
     @Test
@@ -21,7 +21,7 @@ public class Exercise10TestValidation {
 
         String calculate = "10 * 20 + 30";
 
-        assertEquals("Wrong result!", 230, tester.run(calculate));
+        assertEquals("Wrong result!", 230, tester.run(calculate), 0);
     }
 
     @Test
@@ -30,6 +30,6 @@ public class Exercise10TestValidation {
 
         String calculate = "10 * (20 + 30)";
 
-        assertEquals("Wrong result!", 500, tester.run(calculate));
+        assertEquals("Wrong result!", 500, tester.run(calculate), 0);
     }
 }
