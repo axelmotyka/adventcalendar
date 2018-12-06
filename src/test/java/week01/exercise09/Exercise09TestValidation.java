@@ -23,4 +23,22 @@ public class Exercise09TestValidation {
 
         assertEquals("Wrong result!", "aaaaaccddddeeeeeeghhhiiillmmnoorrrssstttttvyz", tester.run(message));
     }
+
+    @Test
+    public void sortedStringTest() {
+        Exercise09 tester = new Exercise09();
+
+        String message = "abcd";
+
+        assertEquals("Wrong result!", "abcd", tester.run(message));
+    }
+
+    @Test
+    public void mirroredStringTest() {
+        Exercise09 tester = new Exercise09();
+
+        String message = "dcba";
+
+        assertEquals("Wrong result!", "abcd", tester.run(message));
+    }
 }
