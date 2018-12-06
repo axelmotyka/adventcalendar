@@ -17,17 +17,16 @@ public class Exercise03 {
         String hours, min;
         int intTime= Integer.valueOf(time);
 
-        if (intTime < 60) {  //
+        if (intTime == 0) {
+            return "0";
+        }
+        else if (intTime < 60) {  //
             hours = "0";
             min = Integer.toString(intTime);
         } else {
             hours = Integer.toString(intTime / 60);
             min = Integer.toString(intTime % 60);
         }
-        if (intTime == 0) {
-            return String.format("0", hours);
-        }
-
 
         return String.format("%s:%s", hours, min);
     }
