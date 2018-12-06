@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class Exercise04Test {
+public class Exercise04TestValidation {
 
     @Test
     public void runMethodTest01() {

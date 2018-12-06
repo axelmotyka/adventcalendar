@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import week01.exercise01.Exercise01;
 
-public class Exercise01Test {
+public class Exercise01TestValidation {
 
     @Test
     public void runIsReturningHelloDevAcademy() {

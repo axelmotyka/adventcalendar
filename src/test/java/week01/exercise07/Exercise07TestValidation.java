@@ -7,7 +7,7 @@ import java.util.HashMap;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
-public class Exercise07Test {
+public class Exercise07TestValidation {
 
     @Test
     public void generateCipherTestWith0() {

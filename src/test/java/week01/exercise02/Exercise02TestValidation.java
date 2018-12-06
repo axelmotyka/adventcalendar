@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class Exercise02Test {
+public class Exercise02TestValidation {
 
     @Test
     public void runMethodReturnsCapitalizedString() {

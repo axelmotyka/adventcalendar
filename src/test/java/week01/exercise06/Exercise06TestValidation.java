@@ -5,7 +5,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import static org.junit.Assert.assertArrayEquals;
 
-public class Exercise06Test {
+public class Exercise06TestValidation {
 
     @Test
     public void emptyOuterArraysTest() {
