@@ -16,6 +16,14 @@ public class Exercise04 {
     public String run(String text) {
         log.info(String.format("Run(\"%s\")", text));
 
-        return text;
+        String words [] = text.split(" ");
+        String longest ="";
+        for (int i = 0; i < words.length; i++) {
+            String word = words[i].replaceAll("[\\W]", "");
+            if (word.length() > longest.length()) {
+                longest = word;
+            }
+        }
+    return longest;
     }
 }
