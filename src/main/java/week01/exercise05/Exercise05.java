@@ -15,24 +15,24 @@ public class Exercise05 {
     public String run(String text) {
         log.info(String.format("Run(\"%s\")", text));
 
-        String string = "";
+        String result = "";
 
         for (char letter : text.toCharArray()){
             // Prüfung nach Bustabenwerten
             if (Character.isAlphabetic(letter)) {
                 // Zeichencode zu subtrahieren (Wert 0-25) um 1 zu erhöhen / Modulus 26 + a für Z -> a
-                string += Character.toString((char) (((letter - 'a' + 1) % 26) + 'a'));
+                result += Character.toString((char) (((letter - 'a' + 1) % 26) + 'a'));
             } else {
-                string += Character.toString(letter);
+                result += Character.toString(letter);
             }
         }
 
         int counter = 0;
-        StringBuilder result = new StringBuilder(string);
+        StringBuilder string = new StringBuilder(result);
 
-        for (int i = 0; i < string.length(); i++){
+        for (int i = 0; i < result.length(); i++){
             // i loopt für die Vokal Buchstaben
-            char vowels = string.charAt(i);
+            char vowels = result.charAt(i);
             switch (vowels) {
 
                 case 'a':
@@ -40,14 +40,14 @@ public class Exercise05 {
                 case 'i':
                 case 'o':
                 case 'u':
-                    result.setCharAt(i, Character.toUpperCase(vowels));
+                    string.setCharAt(i, Character.toUpperCase(vowels));
                     counter++;
                     break;
             }
         }
 
-        string = result.toString();
+        result = string.toString();
 
-        return string;
+        return result;
     }
 }
