@@ -9,11 +9,29 @@ import java.util.logging.Logger;
  * Separate the number of hours and minutes with a colon.
  */
 public class Exercise03 {
-    private static final Logger log = Logger.getLogger( Exercise03.class.getName() );
 
-    public String run(String time) {
-        log.info(String.format("Run(\"%s\")", time));
+    //private static final Logger log = Logger.getLogger( Exercise03.class.getName() );
 
-        return time;
+    //int hour;
+
+    //int minutes;
+
+    public static String run(String time) {
+
+        String hours, min;
+        int intTime= Integer.valueOf(time);
+
+        if (intTime < 60) {  //
+            hours = "0";
+            min = Integer.toString(intTime);
+        } else {
+            hours = Integer.toString(intTime / 60);
+            min = Integer.toString(intTime % 60);
+        }
+
+        //public static String run() {
+        //log.info(String.format("Run(\"%s\")", time));
+
+        return hours + ":" + min;
     }
 }
