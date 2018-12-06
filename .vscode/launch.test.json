@@ -5,7 +5,7 @@
             {
                 "name": "practise",
                 "projectName": "practise",
-                "workingDirectory": "./",
+                "workingDirectory": "d:\\Dev_Academy\\adventcalendar",
                 "args": [],
                 "vmargs": [],
                 "env": {},
@@ -19,7 +19,7 @@
             {
                 "name": "practise",
                 "projectName": "practise",
-                "workingDirectory": "./",
+                "workingDirectory": "d:\\Dev_Academy\\adventcalendar",
                 "args": [],
                 "vmargs": [],
                 "env": {},
