@@ -13,7 +13,17 @@ public class Exercise03 {
 
     public String run(String time) {
         log.info(String.format("Run(\"%s\")", time));
-
-        return time;
+        /* Dieses Zeug programmieren:
+        / int time (time kommt wohl als String, daher in float umwandeln)
+        / if (time > 60.0):
+            time = time/60
+            elif: time == 60:
+                time == 1,0
+            elif: time < 60:
+                time == 0,time
+        / time.replace(",", ":")
+        String time = new String(time).replace(",", ":");
+        return time;*/
+        return new String();
     }
 }
