@@ -14,6 +14,13 @@ public class Exercise03 {
     public String run(String time) {
         log.info(String.format("Run(\"%s\")", time));
 
-        return time;
+        if (time == "0") {
+            return time; // Etwas besseres fiel mir für diesen Sonderfall nicht ein...
+        }
+        int inputMinutes = Integer.parseInt(time);
+        int hours = inputMinutes / 60;
+        int minutes = inputMinutes % 60;
+        String timeString = "" + hours + ":" + minutes;
+        return timeString;
     }
 }
