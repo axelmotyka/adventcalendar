@@ -1,7 +1,5 @@
 package week01.exercise03;
 
-import java.util.logging.Logger;
-
 /**
  * Time Convert
  *
@@ -9,21 +7,34 @@ import java.util.logging.Logger;
  * Separate the number of hours and minutes with a colon.
  */
 public class Exercise03 {
-    private static final Logger log = Logger.getLogger( Exercise03.class.getName() );
+    public String myHoursMinutes;
+    // Der Parameter time bekommt einen Integer geliefert und gibt die Anzahl der Minuten an.
+    public String run(int time) {
 
-    public String run(String time) {
-        log.info(String.format("Run(\"%s\")", time));
-        /* Dieses Zeug programmieren:
-        / int time (time kommt wohl als String, daher in float umwandeln)
-        / if (time > 60.0):
-            time = time/60
-            elif: time == 60:
-                time == 1,0
-            elif: time < 60:
-                time == 0,time
-        / time.replace(",", ":")
-        String time = new String(time).replace(",", ":");
-        return time;*/
-        return new String();
+
+        // Erzeuge eine Integer VAR und füge die Stunden als ganze Zahlen rein.
+        int myHours =  time / 60;
+
+        // Erzeuge eine Integer VAR und füge die Minuten als ganze Zahlen hinzu.
+        int myMinutes = time % 60;
+
+        if (time == 0) {
+            myHoursMinutes = "0";
+            System.out.println(0);
+        }
+        else {
+            String myHoursStr = Integer.toString(myHours);
+            String myMinutesStr = Integer.toString(myMinutes);
+            myHoursMinutes = myHoursStr + ':' + myMinutesStr;
+            System.out.println(myHoursMinutes);
+        }
+
+        /* ALTERNATIVE
+        time.replace(",", ":")
+        double timedoub = (double) time;
+        timedoub = timedoub / 60;
+        String timedoub = new String(time).replace(".", ":");*/
+
+        return myHoursMinutes;
     }
 }
