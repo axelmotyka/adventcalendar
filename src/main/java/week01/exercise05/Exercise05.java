@@ -10,11 +10,22 @@ import java.util.logging.Logger;
  * Then capitalize every vowel in this new string (a, e, i, o, u) and finally return this modified string.
  */
 public class Exercise05 {
-    private static final Logger log = Logger.getLogger( Exercise05.class.getName() );
+    private static final Logger log = Logger.getLogger(Exercise05.class.getName());
 
     public String run(String text) {
         log.info(String.format("Run(\"%s\")", text));
 
-        return text;
+        char[] characters = text.toCharArray();
+        String newString = "";
+        for (int i = 0; i < characters.length; i++) {
+            if (String.valueOf(characters[i]).matches("[A-Za-z]")) {
+                characters[i] += 1;
+                if (String.valueOf(characters[i]).matches("[aAeEiIoOuU]")) {
+                    characters[i] = Character.toUpperCase(characters[i]);
+                }
+            }
+            newString += characters[i];
+        }
+        return newString;
     }
 }
