@@ -7,9 +7,9 @@ package week01.exercise01;
  */
 public class Exercise01 {
 
-    public boolean run() {
-        System.out.println("Hello DecAcademy!");
+    public String run() {
+        System.out.println("Hello DevAcademy!");
 
-        return true;
+        return "HelloDevAcademy";
     }
 }
