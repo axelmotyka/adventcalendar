@@ -10,11 +10,7 @@ import java.util.logging.Logger;
  */
 public class Exercise03 {
 
-    //private static final Logger log = Logger.getLogger( Exercise03.class.getName() );
-
-    //int hour;
-
-    //int minutes;
+    private static final Logger log = Logger.getLogger( Exercise03.class.getName() );
 
     public static String run(String time) {
 
@@ -28,10 +24,11 @@ public class Exercise03 {
             hours = Integer.toString(intTime / 60);
             min = Integer.toString(intTime % 60);
         }
+        if (intTime == 0) {
+            return String.format("0", hours);
+        }
 
-        //public static String run() {
-        //log.info(String.format("Run(\"%s\")", time));
 
-        return hours + ":" + min;
+        return String.format("%s:%s", hours, min);
     }
 }
