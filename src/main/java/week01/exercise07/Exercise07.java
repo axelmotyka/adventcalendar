@@ -1,6 +1,7 @@
 package week01.exercise07;
 
 import java.util.HashMap;
+import java.util.Set;
 
 /**
  * Caesar cipher
@@ -17,8 +18,30 @@ public class Exercise07 {
      * @return HashMap, Like: {[a]=[c], [b]=[d], [c]=[e]}
      */
     public HashMap<String,String> generateCipher(int offset) {
-        return new HashMap<String,String>();
-    };
+        HashMap cipher = new HashMap();
+        for (char i = 'A'; i <= 'Z'; ++i) {
+            char chiffre = (char) (i + offset);
+            if (chiffre > 'Z') {
+                chiffre = (char) (chiffre - 26);
+            }
+            if (chiffre < 'A') {
+                chiffre = (char) (chiffre + 26);
+            }
+            cipher.put(String.valueOf(i), String.valueOf(chiffre));
+        }
+        for (char i = 'a'; i <= 'z'; ++i) {
+            char chiffre = (char) (i + offset);
+            if (chiffre > 'z') {
+                chiffre = (char) (chiffre - 26);
+            }
+            if (chiffre < 'a') {
+                chiffre = (char) (chiffre + 26);
+            }
+            cipher.put(String.valueOf(i), String.valueOf(chiffre));
+        }
+        // Könnte man auch noch für Ziffern so machen
+        return cipher;
+    }
 
     /**
      * Encrypts a unencrypted String with the given cipher.
@@ -26,7 +49,15 @@ public class Exercise07 {
      * @return
      */
     public String encryptString(String message, HashMap cipher) {
-        return new String();
+        char charArray [] = message.toCharArray();
+        String encString = "";
+        for (int i = 0; i < charArray.length; ++i) {
+            if (cipher.get(String.valueOf(charArray[i])) != null) {
+                encString += cipher.get(String.valueOf(charArray[i]));
+            }
+            else encString += String.valueOf(charArray[i]);
+            }
+        return encString;
     }
 
     /**
@@ -35,7 +66,17 @@ public class Exercise07 {
      * @return
      */
     public String decryptString(String encryptedMessage, HashMap cipher) {
-        return new String();
+        HashMap invertedCipher = new HashMap();
+        cipher.forEach((k, v) -> invertedCipher.put(v, k));
+        char charArray [] = encryptedMessage.toCharArray();
+        String decString = "";
+        for (int i = 0; i < charArray.length; ++i) {
+            if (cipher.get(String.valueOf(charArray[i])) != null) {
+                decString += invertedCipher.get(String.valueOf(charArray[i]));
+            }
+            else decString += String.valueOf(charArray[i]);
+        }
+        return decString;
     }
 
     /**
@@ -44,6 +85,6 @@ public class Exercise07 {
      * @return
      */
     public String run(int offset, String message) {
-        return new String();
+        return encryptString(message,generateCipher(offset));
     }
 }
