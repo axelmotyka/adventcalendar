@@ -107,7 +107,7 @@ _A good overview can be found here_ http://www.linux-related.de/index.html?/codi
 Write a small calculator application, which takes a String and computes the result.
 The following arithmetic operations are allowed: `+`, `-`, `*`, `/`, `^2(x)` and `sqr(x)`.
 Check the right order by using parentheses. 
-The result should be rounded off to the second decimal place.
+The result is always an Integer - also the result of a division is rounded to an integer.
 
 Setup a method for every aritmethic operation and write tests for them.
 The input are Strings like this:
