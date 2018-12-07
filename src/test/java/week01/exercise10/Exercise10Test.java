@@ -32,4 +32,30 @@ public class Exercise10Test {
 
         assertEquals("Wrong result!", 500, tester.run(calculate));
     }
+
+    @Test
+    public void calculateTest04() {
+        Exercise10 tester = new Exercise10();
+
+        String calculate = "(10 * 19) * (20 + 30)";
+
+        assertEquals("Wrong result!", 500, tester.run(calculate));
+    }
+    @Test
+    public void calculateTest05() {
+        Exercise10 tester = new Exercise10();
+
+        String calculate = "((3 + 3)*(3+3))";
+
+        assertEquals("Wrong result!", 500, tester.run(calculate));
+    }
+
+    @Test
+    public void calculateTest06() {
+        Exercise10 tester = new Exercise10();
+
+        String calculate = "(10*19)*666";
+
+        assertEquals("Wrong result!", 500, tester.run(calculate));
+    }
 }
