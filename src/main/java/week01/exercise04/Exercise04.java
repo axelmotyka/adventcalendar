@@ -15,6 +15,16 @@ public class Exercise04 {
 
     public String run(String text) {
         log.info(String.format("Run(\"%s\")", text));
+/*
+1) Slice the string "test" into words, delimiter is a blank space.
+2) Put the words in a new string variable with a list of words.
+3) Delete punctuation like !, ., , ? etc.
+4) Iterate through the list of words, take each word and ...
+4) ... determine its length.
+5) Create a new string variable "longestWord" and put in each iteration the word in it, if it is longer
+than the length of the  current "longestWord".
+6) Print out and return the result.
+ */
 
         return text;
     }
