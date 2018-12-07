@@ -68,4 +68,13 @@ public class Exercise10TestValidation {
 
         assertEquals("Wrong result!", 250, tester.run(calculate));
     }
+
+    @Test
+    public void parenthesis05() {
+        Exercise10 tester = new Exercise10();
+
+        String calculate = "(10 * 50) / (2 * 5)";
+
+        assertEquals("Wrong result!", 50, tester.run(calculate));
+    }
 }

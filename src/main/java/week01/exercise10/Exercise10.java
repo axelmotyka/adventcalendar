@@ -36,6 +36,7 @@ public class Exercise10 {
         for (; i >= 0; i--) {
             if (Character.isDigit(calculate.charAt(i)) == false) break;
         }
+
         return i;
     }
 
@@ -44,19 +45,28 @@ public class Exercise10 {
         for (; i < calculate.length(); i++) {
             if (Character.isDigit(calculate.charAt(i)) == false) break;
         }
+
         return i;
     }
 
     public int getRightParenthesisPos(String calculate, int start) {
-        int i = calculate.length() - 1;
-        for (; i > start; i--) {
-            if (calculate.charAt(i) == ')') break;
+        int i = start;
+        int opened = 0;
+
+        while(i < calculate.length()) {
+            if(calculate.charAt(i) == '(') {
+                opened++;
+            } else if(calculate.charAt(i) == ')'){
+                opened--;
+                if(opened == 0) break;
+            }
+            i++;
         }
+
         return i;
     }
 
     public String calculate(String left, String right, char operator) {
-
         String result = "";
         switch (operator) {
             case '*':
@@ -72,6 +82,7 @@ public class Exercise10 {
                 result = minus(left, right);
                 break;
         }
+
         return result;
     }
 
@@ -81,26 +92,25 @@ public class Exercise10 {
         if (right < temp.length()) {
             calculate += temp.substring(right);
         }
+
         return calculate;
     }
 
     public String handleSingleOperation(String calculate, char operator, int operatorIndex) {
-        // find values
         int left = getLeftValuePos(calculate, operatorIndex);
         int right = getRightValuePos(calculate, operatorIndex);
         String leftStr = calculate.substring(left + 1, operatorIndex);
         String rightStr = calculate.substring(operatorIndex + 1, right);
 
-        // calculate
         String result = calculate(leftStr, rightStr, operator);
-        calculate = replaceResult(calculate, result, left, right);
 
-        return calculate;
+        return replaceResult(calculate, result, left, right);
     }
 
     public String handleParenthesis(String calculate, int start) {
         int right = getRightParenthesisPos(calculate, start);
         String result = parse(calculate.substring(start + 1, right));
+
         return replaceResult(calculate, result, start - 1, right + 1);
     }
 
@@ -130,6 +140,5 @@ public class Exercise10 {
         calculate = calculate.replaceAll("\\s", "");
 
         return Integer.valueOf(parse(calculate));
-
     }
 }
