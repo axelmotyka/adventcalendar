@@ -15,7 +15,7 @@ public class Exercise06 {
     public int[][] run(int[][] x, int[][] y) {
         log.info("Run()");
 
-        int[][] result = new int [5][5];
+        int[][] result = new int [x.length][x[0].length];
         for (int i = 0; i < x.length; i++) {
             for (int ii = 0; ii < x[i].length; ii++) {
                 result[i][ii] = x[i][ii] * y[i][ii];
