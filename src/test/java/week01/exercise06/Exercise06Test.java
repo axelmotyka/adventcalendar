@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 public class Exercise06Test {
 
     @Test
-    public void runMethodTest() {
+    public void runMethodTest06() {
         Exercise06 tester = new Exercise06();
 
         int[][] x = new int[][]{
@@ -29,17 +29,15 @@ public class Exercise06Test {
         int[][] expected = new int[][]{
                 { 6, 14, 24, 36, 50 },
                 { 50, 24, 21, 16, 9 },
-                { 36, 30, 18, 7, 40 },
+                { 36, 30, 12, 7, 40 },
                 { 24, 18, 10, 30, 28 },
                 { 14, 8, 45, 40, 18 }
         };
 
-        int[][] result = tester.run(x, y);
-
-        assertEquals("Wrong length in y-axis!", 5, result.length);
+        assertEquals("Wrong length in y-axis!", 5, tester.run(x, y).length);
         for(int i=0; i<expected.length; i++) {
-            assertEquals("Wrong length in x-axis!", 5, result[i].length);
-            assertArrayEquals("Wrong value in y-axis[" + i + "]:", expected[i], result[i]);
+            assertEquals("Wrong length in x-axis!", 5, tester.run(x, y)[i].length);
+            assertArrayEquals("Wrong value in y-axis[" + i + "]:", expected[i], tester.run(x, y)[i]);
         }
 
     }
