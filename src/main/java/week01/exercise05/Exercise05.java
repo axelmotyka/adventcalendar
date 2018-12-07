@@ -18,7 +18,7 @@ public class Exercise05 {
         char[] characters = text.toCharArray();
         String newString = "";
         for (int i = 0; i < characters.length; i++) {
-            if (String.valueOf(characters[i]).matches("[A-Za-z]")) {
+            if (String.valueOf(characters[i]).matches("[A-Za-z]")) /* finde ich besser als \\w */ {
                 characters[i] += 1;
                 if (String.valueOf(characters[i]).matches("[aAeEiIoOuU]")) {
                     characters[i] = Character.toUpperCase(characters[i]);
