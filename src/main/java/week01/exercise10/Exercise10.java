@@ -1,5 +1,8 @@
 package week01.exercise10;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.regex.MatchResult;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -33,6 +36,19 @@ public class Exercise10 {
 
     }
 
+    public Iterable<MatchResult> findMatches( String pattern, CharSequence s )
+    {
+        List<MatchResult> results = new ArrayList<MatchResult>();
+
+        for ( Matcher m = Pattern.compile(pattern).matcher(s); m.find(); )
+
+            results.add( m.toMatchResult() );
+
+        return results;
+    }
+
+
+
     public int calculateExpression(String calculate)
     {
         char[] chars = calculate.toCharArray();
@@ -40,82 +56,107 @@ public class Exercise10 {
 
         int low = -1;
         int high = -1;
-        int partResult = 0;
+        int[] partResult= new int[10];
         String lowerpart="";
         String higherpart="";
         String partExpression;
+        int n =0;
 
 
         // Check for Parentheses ...
-        for( int x = 0; x < chars.length; x++ ) {
-            if (chars[x] == '(') {
-                low = x;
-
-            }
-        }
-        for( int x = 0; x < chars.length; x++ ) {
-            if (chars[x] == ')' && low < x && high == -1)
-            {
-                high=x;
-            }
 
 
-        }
+        String[] partString= new String [10];
+        String[] partStringoriginal= new String [10];
 
+        Pattern pattern = Pattern.compile( "\\(.*?\\)" );
+        Matcher matcher = pattern.matcher( calculate );
+        while ( matcher.find() ) {
+            System.out.println(matcher.group());
+            partStringoriginal[n]=matcher.group();
 
-        // String without Parantheses
-        if ( low != -1 && high != -1 )
-        {
+            System.out.println("This is the partstring para " + partStringoriginal[n]);
+            partString[n]= partStringoriginal[n].replaceAll("\\(","");
+            partString[n]= partString[n].replaceAll("\\)","");
+            System.out.println("This is the partstring para 2" + partString[n]);
+            System.out.println("This is the calculate para " + calculate);
+            // partResult[n]=calculateExpression(partString);
+            partResult[n]=666;
+            calculate=calculate.replace(partStringoriginal[n],Integer.toString(partResult[n]));
+            System.out.println("gesamt " + calculate);
 
-            partExpression=calculate.substring(low+1,high);
-            System.out.println("This is the partexpression " + partExpression);
-            //partResult=calculateExpression(calculate.substring(low+1,high-1));
-            partResult=666;
-            lowerpart=calculate.substring(0,low);
-            higherpart=calculate.substring(high+1);
-            System.out.println( "low !!! " + lowerpart);
-            System.out.println("high !! " + higherpart);
-            System.out.println("This is the complete expression " + lowerpart + partResult + higherpart);
-
-
-        }
-
-
-        calculate = lowerpart+partResult+higherpart;
-
-        chars = calculate.toCharArray();
-
-
-
-
-        // Check for Paranthees again
-        low = -1;
-        for( int x = 0; x < chars.length; x++ ) {
-            if (chars[x] == '(') {
-                low = x;
-
-            }
-        }
-
-        if (low != -1 )
-        {
-            calculateExpression(lowerpart + partResult + higherpart);
+            n++;
 
         }
 
 
 
-        int first=-1;
-        low = -1 ;
+        //Check for multiplication .
 
-        //Check for multiplication ...
+        pattern = Pattern.compile( "\\d+\\*\\d*" );
+        matcher = pattern.matcher( calculate );
+        int calcResult=0;
+        String[] calcArray = new String[10];
+
+        n=0;
+
+        while ( matcher.find() ) {
+            System.out.println(matcher.group());
+            partStringoriginal[n] = matcher.group();
+            System.out.println("This is the partstring multi " + partStringoriginal[n]);
+            calcArray = partStringoriginal[n].split("\\*");
+            calcResult = Integer.valueOf(calcArray[0]) * Integer.valueOf(calcArray[1]);
+            System.out.println("Multicalc " + calcResult);
+            calculate=calculate.replace(partStringoriginal[n],Integer.toString(calcResult));
+            matcher = pattern.matcher( calculate );
+        }
+        System.out.println("gesamt calculate " + calculate);
+
+            /*partString[n]= partStringoriginal[n].replaceAll("\\(","");
+            partString[n]= partString[n].replaceAll("\\)","");
+            System.out.println("This is the partstring para 2" + partString[n]);
+            System.out.println("This is the calculate para " + calculate);
+            // partResult[n]=calculateExpression(partString);
+            partResult[n]=666;
+            calculate=calculate.replace(partStringoriginal[n],Integer.toString(partResult[n]));
+            System.out.println("gesamt " + calculate);
+
+            n++;*/
 
 
-        Matcher matcher = Pattern.compile("\\*" ).matcher( calculate );
-        StringBuffer sb = new StringBuffer();
 
+
+
+
+
+
+        /*
+        //partString="";
+        //pattern = "\\d*\\*\\d*";
+        for ( MatchResult r : findMatches( pattern, calculate ) ) {
+            System.out.println("HELLO " + r.group() + "Getclass " + r.getClass() + " groupcount " + r.groupCount()
+                    + " End ");
+            partString=r.group();
+        }
+        System.out.println("This is the partstring multi" + partString);
+        System.out.println("This is the calculate multi" + calculate);
+
+        String textarray[] = partString.split("\\*");
+        System.out.println( "Both operators " + textarray[0] + " " +  textarray[1]);
+        //partResult=(Integer.valueOf(textarray[0]) * Integer.valueOf(textarray[1]));
+
+*/
+
+
+        //List<generic> Hallo;
+
+
+
+
+
+/*
         while ( matcher.find())
-            matcher.
+
             matcher.appendReplacement( sb, "[PIEP]" );
         matcher.appendTail( sb );
         System.out.println( "FOUND" + sb );
@@ -139,7 +180,7 @@ public class Exercise10 {
 
         */
 
-        System.out.println("found paranthese 3" + low + high );
+        //System.out.println("found paranthese 3" + low + high );
 
         return 0;
 
