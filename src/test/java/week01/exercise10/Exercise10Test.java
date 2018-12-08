@@ -39,7 +39,7 @@ public class Exercise10Test {
 
         String calculate = "(10 * 19) * (20 + 30)";
 
-        assertEquals("Wrong result!", 500, tester.run(calculate));
+        assertEquals("Wrong result!", 9500, tester.run(calculate));
     }
 
     @Test
@@ -48,7 +48,7 @@ public class Exercise10Test {
 
         String calculate = "(10*19)*666";
 
-        assertEquals("Wrong result!", 500, tester.run(calculate));
+        assertEquals("Wrong result!", 126540, tester.run(calculate));
     }
 
 
@@ -58,7 +58,7 @@ public class Exercise10Test {
 
         String calculate = "10*19*666";
 
-        assertEquals("Wrong result!", 500, tester.run(calculate));
+        assertEquals("Wrong result!", 126540, tester.run(calculate));
     }
 
 
@@ -68,6 +68,6 @@ public class Exercise10Test {
 
         String calculate = "10*19+55*3";
 
-        assertEquals("Wrong result!", 500, tester.run(calculate));
+        assertEquals("Wrong result!", 355, tester.run(calculate));
     }
 }

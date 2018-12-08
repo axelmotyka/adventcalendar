@@ -32,7 +32,7 @@ public class Exercise10 {
         calculateExpression(calculate);
 
 
-        return 0;
+        return Integer.valueOf(calculateExpression(calculate));
 
     }
 
@@ -49,7 +49,7 @@ public class Exercise10 {
 
 
 
-    public int calculateExpression(String calculate)
+    public String calculateExpression(String calculate)
     {
         char[] chars = calculate.toCharArray();
 
@@ -65,12 +65,14 @@ public class Exercise10 {
 
         // Check for Parentheses ...
 
-
+        // Declaration of some variables for the Parentheses.
         String[] partString= new String [10];
         String[] partStringoriginal= new String [10];
-
+        // Establish a pattern for the parentheses
         Pattern pattern = Pattern.compile( "\\(.*?\\)" );
         Matcher matcher = pattern.matcher( calculate );
+        // now check for parentheses . If the parentheses would be found the inner parentheses would be
+        // call in a recrusiv function call . The parentheses will be cutted
         while ( matcher.find() ) {
             System.out.println(matcher.group());
             partStringoriginal[n]=matcher.group();
@@ -80,8 +82,8 @@ public class Exercise10 {
             partString[n]= partString[n].replaceAll("\\)","");
             System.out.println("This is the partstring para 2" + partString[n]);
             System.out.println("This is the calculate para " + calculate);
-            // partResult[n]=calculateExpression(partString);
-            partResult[n]=666;
+            partResult[n]=Integer.valueOf(calculateExpression(partString[n]));
+            //partResult[n]=666;
             calculate=calculate.replace(partStringoriginal[n],Integer.toString(partResult[n]));
             System.out.println("gesamt " + calculate);
 
@@ -89,10 +91,10 @@ public class Exercise10 {
 
         }
 
-
+        // ----------------------------------------------
 
         //Check for multiplication .
-
+        // Declaration of some variables for the Parentheses.
         pattern = Pattern.compile( "\\d+\\*\\d*" );
         matcher = pattern.matcher( calculate );
         int calcResult=0;
@@ -100,6 +102,9 @@ public class Exercise10 {
 
         n=0;
 
+        // now check for multiplication . If the multiplication  would be found the first multiplication would be
+        // cutted and the both digits will be cutted to an array  . Then the complete string will be updated so
+        // that for instance  a*b*c will be d*c . And after that the d will be multiplicated with c.
         while ( matcher.find() ) {
             System.out.println(matcher.group());
             partStringoriginal[n] = matcher.group();
@@ -110,79 +115,61 @@ public class Exercise10 {
             calculate=calculate.replace(partStringoriginal[n],Integer.toString(calcResult));
             matcher = pattern.matcher( calculate );
         }
-        System.out.println("gesamt calculate " + calculate);
+        System.out.println("gesamt calculate multi " + calculate);
 
-            /*partString[n]= partStringoriginal[n].replaceAll("\\(","");
-            partString[n]= partString[n].replaceAll("\\)","");
-            System.out.println("This is the partstring para 2" + partString[n]);
-            System.out.println("This is the calculate para " + calculate);
-            // partResult[n]=calculateExpression(partString);
-            partResult[n]=666;
-            calculate=calculate.replace(partStringoriginal[n],Integer.toString(partResult[n]));
-            System.out.println("gesamt " + calculate);
-
-            n++;*/
+        //-------------------------------------------------------
 
 
+        //Check for division .
+        // Declaration of some variables for the Parentheses.
+        pattern = Pattern.compile( "\\d+/\\d*" );
+        matcher = pattern.matcher( calculate );
+        calcResult=0;
+        calcArray = new String[10];
 
+        n=0;
 
-
-
-
-
-        /*
-        //partString="";
-        //pattern = "\\d*\\*\\d*";
-        for ( MatchResult r : findMatches( pattern, calculate ) ) {
-            System.out.println("HELLO " + r.group() + "Getclass " + r.getClass() + " groupcount " + r.groupCount()
-                    + " End ");
-            partString=r.group();
+        // now check for division same like multiplikation
+        while ( matcher.find() ) {
+            System.out.println(matcher.group());
+            partStringoriginal[n] = matcher.group();
+            System.out.println("This is the partstring div " + partStringoriginal[n]);
+            calcArray = partStringoriginal[n].split("/");
+            calcResult = Integer.valueOf(calcArray[0]) / Integer.valueOf(calcArray[1]);
+            System.out.println("divicalc " + calcResult);
+            calculate=calculate.replace(partStringoriginal[n],Integer.toString(calcResult));
+            matcher = pattern.matcher( calculate );
         }
-        System.out.println("This is the partstring multi" + partString);
-        System.out.println("This is the calculate multi" + calculate);
+        System.out.println("gesamt calculate division " + calculate);
 
-        String textarray[] = partString.split("\\*");
-        System.out.println( "Both operators " + textarray[0] + " " +  textarray[1]);
-        //partResult=(Integer.valueOf(textarray[0]) * Integer.valueOf(textarray[1]));
-
-*/
+        //-------------------------------------------------------
 
 
-        //List<generic> Hallo;
+        //Check for addition .
+        // Declaration of some variables for the Parentheses.
+        pattern = Pattern.compile( "\\d+\\+\\d*" );
+        matcher = pattern.matcher( calculate );
+        calcResult=0;
+        calcArray = new String[10];
 
+        n=0;
 
+        // now check for division same like multiplikation
+        while ( matcher.find() ) {
+            System.out.println(matcher.group());
+            partStringoriginal[n] = matcher.group();
+            System.out.println("This is the partstring adition " + partStringoriginal[n]);
+            calcArray = partStringoriginal[n].split("\\+");
+            calcResult = Integer.valueOf(calcArray[0]) + Integer.valueOf(calcArray[1]);
+            System.out.println("adition " + calcResult);
+            calculate=calculate.replace(partStringoriginal[n],Integer.toString(calcResult));
+            matcher = pattern.matcher( calculate );
+        }
+        System.out.println("gesamt calculate addition " + calculate);
 
+        //-------------------------------------------------------
 
-
-/*
-        while ( matcher.find())
-
-            matcher.appendReplacement( sb, "[PIEP]" );
-        matcher.appendTail( sb );
-        System.out.println( "FOUND" + sb );
-
-
-
-        /*
-        for( int x = 0; x < chars.length; x++ )
-        {
-            if ((int) chars[x] >= 48 && (int)chars[x] <= 57 )
-            {
-                first=x;
-
-            }
-
-            if (chars[x] == '*' && chars[x+1] == '-' )
-            {
-                low=x;
-
-            }
-
-        */
-
-        //System.out.println("found paranthese 3" + low + high );
-
-        return 0;
+        return calculate;
 
     }
 }
