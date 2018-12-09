@@ -1,5 +1,7 @@
 package week01.exercise04;
 
+import com.sun.istack.internal.Nullable;
+
 import java.util.logging.Logger;
 
 /**
@@ -11,20 +13,42 @@ import java.util.logging.Logger;
  *
  */
 public class Exercise04 {
-    private static final Logger log = Logger.getLogger( Exercise04.class.getName() );
+    private static final Logger log = Logger.getLogger(Exercise04.class.getName() );
 
     public String run(String text) {
         log.info(String.format("Run(\"%s\")", text));
-/*
-1) Slice the string "test" into words, delimiter is a blank space.
-2) Put the words in a new string variable with a list of words.
-3) Delete punctuation like !, ., , ? etc.
-4) Iterate through the list of words, take each word and ...
-4) ... determine its length.
-5) Create a new string variable "longestWord" and put in each iteration the word in it, if it is longer
-than the length of the  current "longestWord".
-6) Print out and return the result.
- */
+
+        // Define the variables we need to process through the string in order to find the longest word.
+        int i = 0;
+        int y = 0;
+        String longestWord = "";
+        String[] punctuation = {"!", "#", "$", "%", "&", ",", "-", ".", "/", ":", ";", "<", "=", ">", "@", "]", "_", "`", "}", "~"};
+
+        String[] wordsText = text.split(" ");
+        int wordNumber = wordsText.length;
+
+        // Iterate through the list of words in the variable "wordsText".
+        for (i=0; i < wordNumber; i++) {
+            int x = 0;
+
+            // Replace (delete) all punctuation in the word.
+            for (x = 0; x < punctuation.length; x++) {
+                wordsText[i] = wordsText[i].replace(punctuation[x], "");
+                //x++;
+            }
+            //i++;
+        }
+
+        // Find the longest word in the list of words, where words are cleaned up from punctuation.
+        for (y = 0; y < wordNumber; y++) {
+
+            if (longestWord.length() < wordsText[y].length()) {
+                longestWord = wordsText[y];
+                text = longestWord;
+            } else {
+                continue;
+            }
+        }
 
         return text;
     }
