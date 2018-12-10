@@ -16,22 +16,32 @@ public class Exercise09 {
     public String run(String text) {
         log.info(String.format("Run(\"%s\")", text));
 
-        char[] textArray = {};
+        public char[] charArray = {};
         for (int i=0; i<text.length(); i++)
-            textArray[i] = text.charAt(i);
+            charArray[i] = text.charAt(i);
 
-        return QuickSort(textArray).toString();
+        return QuickSort(charArray).toString();
     }
 
-    private char[] QuickSort(char[] textArray) {
+    char[] QuickSort(char[] charArray) {
         int L = 0;
-        int R = textArray.length;
-        int temp;
+        int R = charArray.length - 1;
 
-        while (L<R) {
-            
+
+        while (true) {
+            char trenner = charArray[R];
+            if (charArray[L] > charArray[R--]) charArray = swapLR(charArray,L,R);
+
         }
 
-        return textArray;
+        return charArray;
+    }
+
+    char[] swapLR(char[] chain, int L, int R) {
+        char temp;
+        temp = chain[R];
+        chain[R] = chain[L];
+        chain[L] = temp;
+        return chain;
     }
 }
