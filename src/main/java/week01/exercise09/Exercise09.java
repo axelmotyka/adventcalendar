@@ -16,32 +16,33 @@ public class Exercise09 {
     public String run(String text) {
         log.info(String.format("Run(\"%s\")", text));
 
-        public char[] charArray = {};
-        for (int i=0; i<text.length(); i++)
-            charArray[i] = text.charAt(i);
+        int len = text.length();
+        int letterLen = 0;
+        char[] charArray = new char[len];
 
-        return QuickSort(charArray).toString();
+        for (int i=0; i<len; i++)
+            if (Character.isLetter(text.charAt(i)))
+                charArray[letterLen++] = text.charAt(i);
+
+        quickSort(charArray,0, letterLen-1);
+        return String.valueOf(charArray, 0, letterLen);
     }
 
-    char[] QuickSort(char[] charArray) {
-        int L = 0;
-        int R = charArray.length - 1;
+    // slightly modified, but 95% copied from http://www.linux-related.de/index.html?/coding/sort/sort_quick.htm
+    void quickSort(char a[], int l, int r){		//a=Array, l=linker Rand, r=rechter Rand
+        if(r>l){					//solange mehr als 1 Folgenelement existiert
+            int i=l-1, j=r;
+            char tmp;			//Variableninitialisierung mit Folgenrändern
+            for(;;){				//Endlosschleife; bricht ab, wenn i>=j
+                while(a[++i]<a[r]);			//inkrem., bis größeres  Element gefunden wird
+                while(a[--j]>a[r] && j>i);		//dekrem., bis kleineres Element gefunden wird
+                if(i>=j) break;			//brich ab, wenn sich die Folgenzeiger treffen
+                tmp=a[i]; a[i]=a[j]; a[j]=tmp;	//tausche kleineres mit größerem Element
+            }
+            tmp=a[i]; a[i]=a[r]; a[r]=tmp;		//tausche Trennelement
 
-
-        while (true) {
-            char trenner = charArray[R];
-            if (charArray[L] > charArray[R--]) charArray = swapLR(charArray,L,R);
-
+            quickSort(a, l, i-1);			//rekursiver Aufruf für linke Teilfolge
+            quickSort(a, i+1, r);			//rekursiver Aufruf für rechte Teilfolge
         }
-
-        return charArray;
-    }
-
-    char[] swapLR(char[] chain, int L, int R) {
-        char temp;
-        temp = chain[R];
-        chain[R] = chain[L];
-        chain[L] = temp;
-        return chain;
     }
 }
