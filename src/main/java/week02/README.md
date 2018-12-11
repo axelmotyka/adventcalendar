@@ -60,10 +60,12 @@ Implement different types of vehicle.
  Generate a `CompetitorsList` which holds `Driver` and `Vehicle`.
   
   1. Create class `CompetitorsGenerator`, which randomly generates drivers and related vehicles.
-  2. Create class `Competitor` storing assigment `Vehicle`[=>`Driver` with:
+  2. Create class `Competitor` storing assigment `Vehicle`=>`Driver` with:
+    * _getPoints()_ => returns the actual points as int
+    * _addPoints(int)_ => add's points from a race
   3. Create class `CompetitorsList` storing `Competitor`
     * _getCompetitors()_ => which returns a list of `Competitor`
-    * _toString()_ => method, which concatenates the contained toString() 
+    * _toString()_ => method, which concatenate the contained toString() methods. This will generate a String like '[Points] [Driver] [Vehicle]'
   4. Add useful unit tests
   5. Visualize created classes with plantuml as class diagram, inclusive associations.
   
@@ -103,7 +105,7 @@ Implement different types of vehicle.
         * without a race by _drivers last name_, _drivers first name_, _vehicles manufacturer_
         * after a race has happened by the competitors points
         * Store the placements shift after a race, means if a competitor went places up, down or remained.
-      * _toString()_ => the standing as String like '[Place] [Placement shift] [Points] [Competitor]'
+      * _toString()_ => the standing as String like '[Place] [Placement shift] [Competitor]'
         * for the shift up &#8593;
         * for shift down &#8595;
         * for a remained placement &#8594;
