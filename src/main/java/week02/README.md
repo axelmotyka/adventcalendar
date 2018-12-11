@@ -22,11 +22,12 @@ https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml
 
 ### Hints, requirements
  
- * Use `RacingGame` as the operational class through all exercises.
+ * Every exercise use the previous solution, so copy your implementation from one exercise to the next one.
+ * Use `RacingGame` as the operational class through all exercises. That means we handle all racing stuff from this class.
  * Consider class `Vehicle` and `Driver` to be 'immutable'.
  * Driver's starting number and vehicle's number has to be unique.
  * One driver can drive only one vehicle.`
- * One vehicle can be drive only by one driver.
+ * One vehicle can be driven by only one driver.
  * Implement useful Getter and Setter methods.
 
 ### Exercise 11 - Racing game base classes
