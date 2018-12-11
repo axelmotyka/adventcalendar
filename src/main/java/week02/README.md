@@ -16,9 +16,30 @@ Meine Empfehlung:
 
 ## Week 2 - 10.12. - 14.12.
 
+Main goal of this exercises for this week is to learn and exercise basic pricinpals of OOP (Object oriented programming)
+
+* Encapsulation
+* Polymorphism
+* inheritance
+
+Most of exercises are going to be build on analogy of a cars race.
+
 ### Exercise  - Rennspiel Teil 
 
-(michal) Rennfahrer + planuml
+1. Define classes which model car and driver. 
+1. Paint class models with plantuml drawing tool.
+1. Implement 
+
+#### Platuml
+
+PlantUML is an open-source tool allowing users to create UML diagrams from a plain text language. 
+
+Plugin for InteliJ:
+https://plugins.jetbrains.com/plugin/7017-plantuml-integrationIntelij
+
+Plugin for Visual Studio Code
+https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml
+
 
 ### Exercise  - Rennspiel Teil 
 
