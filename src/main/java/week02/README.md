@@ -2,7 +2,7 @@
 
 ## Week 2 - 10.12. - 14.12.
 
-Main goal of this exercises for this week is to learn and exercise basic pricinpals of OOP (Object oriented programming)
+Main goal of this exercises for this week is to learn and exercise basic principals of OOP (Object oriented programming)
 
 * Encapsulation
 * Polymorphism
@@ -22,11 +22,12 @@ https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml
 
 ### Hints, requirements
  
- * Consider class `Vehicle` and `Driver` to be 'immutable'
+ * Use `RacingGame` as the operational class through all exercises.
+ * Consider class `Vehicle` and `Driver` to be 'immutable'.
  * Driver's starting number and vehicle's number has to be unique.
  * One driver can drive only one vehicle.`
  * One vehicle can be drive only by one driver.
- * Implement useful Getter and Setter methods
+ * Implement useful Getter and Setter methods.
 
 ### Exercise 11 - Racing game base classes
 
@@ -57,15 +58,15 @@ Implement different types of vehicle.
  
 ### Exercise 13 - Racing game competitors
  
- Generate a `CompetitorsList` which holds a `Competitor` with a `Driver` and `Vehicle`.
+ Generate a CompetitorsList which holds a Competitor with a Driver and Vehicle.
   
-  1. Create class `CompetitorsGenerator`, which randomly generates drivers and related vehicles.
+  1. Create class `CompetitorsGenerator`, which randomly generates drivers and related vehicles as a `Competitor`.
   2. Create class `Competitor` storing assigment `Vehicle`=>`Driver` with:
-    * _getPoints()_ => returns the actual points as int
-    * _addPoints(int)_ => add's points from a race
-  3. Create class `CompetitorsList` storing `Competitor`
-    * _getCompetitors()_ => which returns a list of `Competitor`
-    * _toString()_ => method, which concatenate the contained toString() methods. This will generate a String like '[Points] [Driver] [Vehicle]'
+  * _getPoints()_ => returns the actual points as int
+  * _addPoints(int)_ => add's points from a race
+  3. Create class `CompetitorsList` storing `Competitor`:
+  * _getCompetitors()_ => which returns a list of `Competitor`
+  * _toString()_ => method, which concatenate the contained toString() methods. This will generate a String like '[Points] [Driver] [Vehicle]'
   4. Add useful unit tests
   5. Visualize created classes with plantuml as class diagram, inclusive associations.
   
@@ -73,7 +74,7 @@ Implement different types of vehicle.
   
   Implement the race with it's starting lineup.
    
-  1. Add and implement following methods to class `Race`
+  1. Add and implement following methods to class `Race`:
       * _addCompetitor(Competitor competitor)_
       * _generateStartingLineup()_ => in the 1st race, the starting lineup is ordered by _drivers last name_, _drivers first name_, _vehicles manufacturer_.
       * _toString()_ => starting lineup as String, like '[Position in StartingLineup] [Competitor]'
@@ -84,7 +85,7 @@ Implement different types of vehicle.
   
   Let'em race!
    
-  1. Add and implement following methods to class `Race`
+  1. Add and implement following methods to class `Race`:
       * _race()_ => run's the race - generate the placement randomly
       * _getResult()_ => race result as an ordered list of competitors. The list is ordered by the placement, like 1s is first, 2nd is second, ....
       * _toString()_ => race result as string, like '[Result Position] [Competitor]'
