@@ -8,11 +8,11 @@ Main goal of this exercises for this week is to learn and exercise basic princip
 * Polymorphism
 * Inheritance
 
-Most of exercises are going to be build on analogy of a cars race.
+The exercises are going to be build on analogy of a cars race.
 
 #### Platuml
 
-PlantUML is an open-source tool allowing users to create UML diagrams from a plain text language. 
+PlantUML is an open-source tool allowing users to create UML diagrams from a plain text language. See http://plantuml.com/class-diagram
 
 Plugin for InteliJ:
 https://plugins.jetbrains.com/plugin/7017-plantuml-integrationIntelij
@@ -23,7 +23,7 @@ https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml
 ### Hints, requirements
  
  * Every exercise use the previous solution, so copy your implementation from one exercise to the next one.
- * Use `RacingGame` as the operational class through all exercises. That means we handle all racing stuff from this class.
+ * Use `RacingGame` as the operational class through all exercises - we handle all racing stuff from this class.
  * Every method that is defined in the exercise must be _public_.
  * Consider class `Vehicle` and `Driver` to be 'immutable'.
  * Driver's starting number and name has to be unique.
