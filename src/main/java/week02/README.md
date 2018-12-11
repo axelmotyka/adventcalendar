@@ -6,7 +6,7 @@ Main goal of this exercises for this week is to learn and exercise basic princip
 
 * Encapsulation
 * Polymorphism
-* inheritance
+* Inheritance
 
 Most of exercises are going to be build on analogy of a cars race.
 
@@ -25,8 +25,8 @@ https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml
  * Every exercise use the previous solution, so copy your implementation from one exercise to the next one.
  * Use `RacingGame` as the operational class through all exercises. That means we handle all racing stuff from this class.
  * Consider class `Vehicle` and `Driver` to be 'immutable'.
- * Driver's starting number and vehicle's number has to be unique.
- * One driver can drive only one vehicle.`
+ * Driver's starting number and name has to be unique.
+ * One driver can drive only one vehicle.
  * One vehicle can be driven by only one driver.
  * Implement useful Getter and Setter methods.
 
@@ -63,11 +63,11 @@ Implement different types of vehicle.
   
   1. Create class `CompetitorsGenerator`, which randomly generates drivers and related vehicles as a `Competitor`.
   2. Create class `Competitor` storing assigment `Vehicle`=>`Driver` with:
-  * _getPoints()_ => returns the actual points as int
-  * _addPoints(int)_ => add's points from a race
+     * _getPoints()_ => returns the actual points as int
+     * _addPoints(int)_ => add's points from a race
   3. Create class `CompetitorsList` storing `Competitor`:
-  * _getCompetitors()_ => which returns a list of `Competitor`
-  * _toString()_ => method, which concatenate the contained toString() methods. This will generate a String like '[Points] [Driver] [Vehicle]'
+     * _getCompetitors()_ => which returns a list of `Competitor`
+     * _toString()_ => method, which concatenate the contained toString() methods. This will generate a String like '[Points] [Driver] [Vehicle]'
   4. Add useful unit tests
   5. Visualize created classes with plantuml as class diagram, inclusive associations.
   
