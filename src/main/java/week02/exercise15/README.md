@@ -3,6 +3,7 @@
   Let'em race!
    
   1. Add and implement following methods to class `Race`:
+      * enhance the constructor with the last result so that the starting lineup can be setup correctly.
       * _race()_ => run's the race - generate the final placement randomly
       * _getResult()_ => race result as an ordered list of competitors. The list is ordered by the placement, like 1s is first, 2nd is second, ....
       * _toString()_ => race result as string, like '[Result Position] [Competitor]'

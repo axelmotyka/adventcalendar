@@ -24,6 +24,7 @@ https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml
  
  * Every exercise use the previous solution, so copy your implementation from one exercise to the next one.
  * Use `RacingGame` as the operational class through all exercises. That means we handle all racing stuff from this class.
+ * Every method that is defined in the exercise must be _public_.
  * Consider class `Vehicle` and `Driver` to be 'immutable'.
  * Driver's starting number and name has to be unique.
  * One driver can drive only one vehicle.
@@ -78,6 +79,7 @@ Implement different types of vehicle.
   1. Add and implement following methods to class `Race`:
       * _addCompetitor(Competitor competitor)_
       * _generateStartingLineup()_ => in the 1st race, the starting lineup is ordered by _drivers last name_, _drivers first name_, _vehicles manufacturer_.
+      * _getStartingLineup()_ => returns the ordered list of competitors.
       * _toString()_ => starting lineup as String, like '[Position in StartingLineup] [Competitor]'
   2. Add useful unit tests
   3. Visualize created classes with plantuml as class diagram, inclusive associations.
@@ -87,6 +89,7 @@ Implement different types of vehicle.
   Let'em race!
    
   1. Add and implement following methods to class `Race`:
+      * enhance the constructor with the last result so that the starting lineup can be setup correctly.
       * _race()_ => run's the race - generate the final placement randomly
       * _getResult()_ => race result as an ordered list of competitors. The list is ordered by the placement, like 1s is first, 2nd is second, ....
       * _toString()_ => race result as string, like '[Result Position] [Competitor]'
