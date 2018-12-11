@@ -62,8 +62,8 @@ Implement different types of vehicle.
   1. Create class `CompetitorsGenerator`, which randomly generates drivers and related vehicles.
   2. Create class `Competitor` storing assigment `Vehicle`[=>`Driver` with:
   3. Create class `CompetitorsList` storing `Competitor`
-      * _toString()_ => method, which concatenates the contained toString() 
-      * _getCompetitors()_ => which returns a list of `Competitor`
+    * _getCompetitors()_ => which returns a list of `Competitor`
+    * _toString()_ => method, which concatenates the contained toString() 
   4. Add useful unit tests
   5. Visualize created classes with plantuml as class diagram, inclusive associations.
   
@@ -71,12 +71,12 @@ Implement different types of vehicle.
   
   Implement the race with it's starting lineup.
    
-  1. add and implement following methods to class `Race`
+  1. Add and implement following methods to class `Race`
       * _addCompetitor(Competitor competitor)_
       * _generateStartingLineup()_ => in the 1st race, the starting lineup is ordered by _drivers last name_, _drivers first name_, _vehicles manufacturer_.
       * _toString()_ => starting lineup as String, like '[Position in StartingLineup] [Competitor]'
-  2. add useful unit tests
-  3. visualize created classes with plantuml as class diagram, inclusive associations.
+  2. Add useful unit tests
+  3. Visualize created classes with plantuml as class diagram, inclusive associations.
   
 ### Exercise 15 - Racing game
   
@@ -90,8 +90,8 @@ Implement different types of vehicle.
       * for the first place the driver gets '[amount of drivers] * 2' points
       * on other placements gives the drivers '[amount of drivers] * 1' points
   3. Generate the next starting lineup from the drivers last race position.
-  4. add useful unit tests
-  3. visualize created classes with plantuml as class diagram, inclusive associations.
+  4. Add useful unit tests
+  3. Visualize created classes with plantuml as class diagram, inclusive associations.
   
 ### Exercise 16 - Racing game
   
@@ -103,5 +103,5 @@ Implement different types of vehicle.
         * without a race by _drivers last name_, _drivers first name_, _vehicles manufacturer_
         * after a race has happened by the competitors points
       * _toString()_ => the standing as String like '[Place] [Points] [Competitor]'
-  3. add useful unit tests
-  4. visualize created classes with plantuml as class diagram, inclusive associations.
+  3. Add useful unit tests
+  4. Visualize created classes with plantuml as class diagram, inclusive associations.
