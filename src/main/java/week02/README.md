@@ -67,6 +67,7 @@ Implement different types of vehicle.
      * _getPoints()_ => returns the actual points as int
      * _addPoints(int)_ => add's points from a race
   3. Create class `CompetitorsList` storing `Competitor`:
+     * _addCompetitor(Competitor competitor)_
      * _getCompetitors()_ => which returns a list of `Competitor`
      * _toString()_ => method, which concatenate the contained toString() methods. This will generate a String like '[Points] [Driver] [Vehicle]'
   4. Add useful unit tests
@@ -77,9 +78,8 @@ Implement different types of vehicle.
   Implement the race with it's starting lineup.
    
   1. Add and implement following methods to class `Race`:
-      * _addCompetitor(Competitor competitor)_
       * _generateStartingLineup()_ => in the 1st race, the starting lineup is ordered by _drivers last name_, _drivers first name_, _vehicles manufacturer_.
-      * _getStartingLineup()_ => returns the ordered list of competitors.
+      * _getStartingLineup()_ => returns the ordered `CompetitorsList`.
       * _toString()_ => starting lineup as String, like '[Position in StartingLineup] [Competitor]'
   2. Add useful unit tests
   3. Visualize created classes with plantuml as class diagram, inclusive associations.
