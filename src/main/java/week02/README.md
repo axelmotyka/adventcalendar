@@ -1,6 +1,6 @@
 # DevAcademy Practices
 
-## Week 2 - 10.12. - 14.12.
+## Week 2 - 13.12.2018 - 11.01.2019
 
 Main goal of this exercises for this week is to learn and exercise basic principals of OOP (Object oriented programming)
 
