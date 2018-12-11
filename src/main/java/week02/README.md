@@ -35,11 +35,13 @@ https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml
 
 Implement basic class lineup.
 
- 1. Define Class `Driver` with following methods:    
+ 1. Define Class `Driver` with following methods:
+    * _Constructor_ => All needed attributes 
     * _getName()_ => returns Lastname, Firstname as String
     * _getStartingNumber()_ => returns the starting number as an int
     * _toString()_ => generates a String like '(1) Joe Cewl' 
  2. Define Class `Vehicle` with following  methods:
+    * _Constructor_ => All needed attributes
     * _getManufacturer()_ - returns the manufacturer like 'Skoda' as String
     * _getName()_ - returns the vehicle name like 'Fabia' as String
     * _getHorsepower()_ - returns the engines horsepower as int
@@ -63,7 +65,7 @@ Implement different types of vehicle.
  Generate a CompetitorsList which holds a Competitor with a Driver and Vehicle.
   
   1. Create class `CompetitorsGenerator`, which randomly generates drivers and related vehicles as a `Competitor`.
-  2. Create class `Competitor` storing assigment `Vehicle`=>`Driver` with:
+  2. Create class `Competitor` storing the assigment of the derived classes of `Vehicle` and `Driver` with:
      * _getPoints()_ => returns the actual points as int
      * _addPoints(int)_ => add's points from a race
   3. Create class `CompetitorsList` storing `Competitor`:
