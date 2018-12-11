@@ -28,7 +28,7 @@ https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml
  * One vehicle can be drive only by one driver.
  * Implement useful Getter and Setter methods
 
-### Exercise 11 - Racing game
+### Exercise 11 - Racing game base classes
 
 Implement basic class lineup.
 
@@ -45,7 +45,7 @@ Implement basic class lineup.
  3. Add useful unit tests
  4. Visualize created classes with plantuml as class diagram, inclusive associations.
  
-### Exercise 12 - Racing game
+### Exercise 12 - Racing game with different vehicles
 
 Implement different types of vehicle.
  
@@ -55,7 +55,7 @@ Implement different types of vehicle.
  5. Enhance toString() method with the new attributes 
  3. Visualize created classes with plantuml as class diagram, inclusive associations.
  
-### Exercise 13 - Racing game
+### Exercise 13 - Racing game competitors
  
  Generate a `CompetitorsList` which holds `Driver` and `Vehicle`.
   
@@ -69,7 +69,7 @@ Implement different types of vehicle.
   4. Add useful unit tests
   5. Visualize created classes with plantuml as class diagram, inclusive associations.
   
-### Exercise 14 - Racing game
+### Exercise 14 - Racing game lineup
   
   Implement the race with it's starting lineup.
    
@@ -80,7 +80,7 @@ Implement different types of vehicle.
   2. Add useful unit tests
   3. Visualize created classes with plantuml as class diagram, inclusive associations.
   
-### Exercise 15 - Racing game
+### Exercise 15 - Racing game race()
   
   Let'em race!
    
@@ -95,7 +95,7 @@ Implement different types of vehicle.
   4. Add useful unit tests
   3. Visualize created classes with plantuml as class diagram, inclusive associations.
   
-### Exercise 16 - Racing game
+### Exercise 16 - Racing game season
   
   Implement and a race season. In one season 1..n races can happen. Compute the final result.
   
