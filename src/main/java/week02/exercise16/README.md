@@ -3,6 +3,7 @@
   Implement and a race season. In one season 1..n races can happen. Compute the final result.
   
   2. Add and implement following methods to class `RacingGame`
+      * enhance the constructor with the amounts of races.
       * _runSeason()_ => run's the amount of races that are happening this season.
       * _getStanding()_ => holds the competitors in their actual standing as a List, order this list by:
         * without a race by _drivers last name_, _drivers first name_, _vehicles manufacturer_

@@ -8,7 +8,7 @@ Implement basic class lineup.
     * _toString()_ => generates a String like '(1) Joe Cewl' 
  2. Define Class `Vehicle` with following  methods:
     * _getManufacturer()_ - returns the manufacturer like 'Skoda' as String
-    * _getVehicleName()_ - returns the vehicle name like 'Fabia' as String
+    * _getName()_ - returns the vehicle name like 'Fabia' as String
     * _getHorsepower()_ - returns the engines horsepower as int
     * _getEngineType_ - returns one of `[electric, diesel, gasoline]` as an Enum
     * _toString()_ - returns the vehicle as String like 'Skoda Fabia, gasoline, 25hps'

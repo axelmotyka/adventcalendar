@@ -40,7 +40,7 @@ Implement basic class lineup.
     * _toString()_ => generates a String like '(1) Joe Cewl' 
  2. Define Class `Vehicle` with following  methods:
     * _getManufacturer()_ - returns the manufacturer like 'Skoda' as String
-    * _getVehicleName()_ - returns the vehicle name like 'Fabia' as String
+    * _getName()_ - returns the vehicle name like 'Fabia' as String
     * _getHorsepower()_ - returns the engines horsepower as int
     * _getEngineType_ - returns one of `[electric, diesel, gasoline]` as an Enum
     * _toString()_ - returns the vehicle as String like 'Skoda Fabia, gasoline, 25hps'
@@ -87,7 +87,7 @@ Implement different types of vehicle.
   Let'em race!
    
   1. Add and implement following methods to class `Race`:
-      * _race()_ => run's the race - generate the placement randomly
+      * _race()_ => run's the race - generate the final placement randomly
       * _getResult()_ => race result as an ordered list of competitors. The list is ordered by the placement, like 1s is first, 2nd is second, ....
       * _toString()_ => race result as string, like '[Result Position] [Competitor]'
   2. Store the race result points to the `Competitor`
@@ -102,6 +102,7 @@ Implement different types of vehicle.
   Implement and a race season. In one season 1..n races can happen. Compute the final result.
   
   2. Add and implement following methods to class `RacingGame`
+      * enhance the constructor with the amounts of races.
       * _runSeason()_ => run's the amount of races that are happening this season.
       * _getStanding()_ => holds the competitors in their actual standing as a List, order this list by:
         * without a race by _drivers last name_, _drivers first name_, _vehicles manufacturer_
