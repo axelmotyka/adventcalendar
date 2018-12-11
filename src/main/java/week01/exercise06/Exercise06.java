@@ -15,13 +15,7 @@ public class Exercise06 {
     public int[][] run(int[][] x, int[][] y) {
         log.info("Run()");
 
-        int[][] result = new int[][]{
-                { 6, 14, 24, 36, 50 },
-                { 50, 24, 21, 16, 9 },
-                { 36, 30, 18, 7, 40 },
-                { 24, 18, 10, 30, 28 },
-                { 14, 8, 45, 40, 18 }
-        };
+        int[][] result = new int[x.length][y.length];
 
         return result;
     }

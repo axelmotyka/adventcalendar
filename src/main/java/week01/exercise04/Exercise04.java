@@ -25,8 +25,10 @@ public class Exercise04 {
     public String run(String parameterTextRun) {
         //log.info(String.format("Run(\"%s\")", text));
         parameterTextRun = cleanText(parameterTextRun);
+
         //ich rufe die Methode getWords auf und übergebe den Wert von ParameterTextRun,
         // danach weise  ich den Rückgabewert von getWords der variabeln Liste zu.
+
         String[] liste = getWords(parameterTextRun);
         // Zaehle Buchstaben
         int indexzaehler=0;
