@@ -15,14 +15,13 @@ public class Exercise06 {
     public int[][] run(int[][] x, int[][] y) {
         log.info("Run()");
 
-        int[][] result = new int[][]{
-                { 6, 14, 24, 36, 50 },
-                { 50, 24, 21, 16, 9 },
-                { 36, 30, 18, 7, 40 },
-                { 24, 18, 10, 30, 28 },
-                { 14, 8, 45, 40, 18 }
-        };
+        int[][] result = new int[5][5];
 
+        for (int i = 0; i < x.length; i++) {
+            for (int j = 0; j < x.length; j++) {
+                result[i][j] = x[i][j] * y[i][j];
+            }
+        }
         return result;
     }
 }
