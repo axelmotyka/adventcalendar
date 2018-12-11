@@ -57,7 +57,7 @@ Implement different types of vehicle.
  
 ### Exercise 13 - Racing game competitors
  
- Generate a `CompetitorsList` which holds `Driver` and `Vehicle`.
+ Generate a `CompetitorsList` which holds a `Competitor` with a `Driver` and `Vehicle`.
   
   1. Create class `CompetitorsGenerator`, which randomly generates drivers and related vehicles.
   2. Create class `Competitor` storing assigment `Vehicle`=>`Driver` with:
