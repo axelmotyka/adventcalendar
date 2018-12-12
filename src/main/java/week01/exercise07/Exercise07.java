@@ -1,6 +1,7 @@
 package week01.exercise07;
 
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Caesar cipher
@@ -18,8 +19,33 @@ public class Exercise07 {
      * @param offset offset for the alphabet cipher
      * @return HashMap, Like: {[A]=[C], [B]=[D], [C]=[E]}
      */
+    // This is my cipher as a HashMap (diese HashMap ist ein "dictionary" mit String-String als Key-Value-Paaren.
     public HashMap<String,String> generateCipher(int offset) {
-        return new HashMap<String,String>();
+        HashMap<String, String> toll = new HashMap<>();
+
+        for (char alphabet = 'A'; alphabet <= 'Z'; alphabet++) {
+            //System.out.println(alphabet);
+            char key = alphabet; // The key in our HashMap is a character from the alphabet.
+            char value = (char) (alphabet + offset); // The value to the key above is the ASCII number.
+
+            // If the value (the ASCII number) is greater than the value of 'Z':
+            if (value > 'Z') {
+                int moveByOffset = value % 'Z'; // Determine the modulo: "value" modulo 'Z', ex. 92%90=2.
+                value = (char) ('A' - 1 + moveByOffset); // Move from 'A'-1 (from the ASCII number) + moveByOffset.
+            }
+            // If the value (the ASCII number) is smaller than the value of 'A':
+            else if (value < 'A') {
+                int moveByOffset = 'A' % value; // Determine the modulo: value of 'A' modulo "value", ex. 65%62=3.
+                value = (char) ('Z' + 1 - moveByOffset); // Move back by moveByOffset from the (ASCII number) 'Z'+1.
+            }
+
+            toll.put(String.valueOf(key), String.valueOf(value));
+        }
+
+        toll.put(" ", " "); // To handle with the spaces.
+
+
+        return toll;
     }
 
     /**
@@ -27,17 +53,48 @@ public class Exercise07 {
      * @param message
      * @return
      */
-    public String encryptString(String message, HashMap cipher) {
-        return new String();
+    // The function "encryptString" has 2 parameters: "message" and "HashMap" with String-String as a cipher ???
+    public String encryptString(String message, HashMap<String, String> cipher) {
+        String stringToEncrypt = message.toUpperCase();
+
+        StringBuilder result = new StringBuilder();
+
+        for (char letter : stringToEncrypt.toCharArray()) {
+            String encrypt = cipher.get(String.valueOf(letter));
+            result.append(encrypt);
+        }
+
+        return result.toString();
     }
 
     /**
      * Decrypts a encrypted String with the given cipher
-     * @param encryptedMessage
+     * @param message
      * @return
      */
-    public String decryptString(String encryptedMessage, HashMap cipher) {
-        return new String();
+    public String decryptString(String message, HashMap<String, String> cipher) {
+        String stringToDecrypt = message.toUpperCase();
+
+        StringBuilder result = new StringBuilder();
+        for (char letter : stringToDecrypt.toCharArray()) {
+            String value = String.valueOf(letter);
+            String decrypt = getKeyForValue(value, cipher);
+            result.append(decrypt);
+        }
+
+        return result.toString();
+    }
+
+
+    public String getKeyForValue(String value, HashMap<String, String> cipher) {
+        for (Map.Entry<String, String> entry : cipher.entrySet()) {
+            String key = entry.getKey();
+            String val = entry.getValue();
+            if (value.equals(val)) {
+                return key;
+            }
+        }
+        return "";
     }
 
     /**
@@ -46,6 +103,6 @@ public class Exercise07 {
      * @return
      */
     public String run(int offset, String message) {
-        return new String();
+        return encryptString(message, generateCipher(offset));
     }
 }
