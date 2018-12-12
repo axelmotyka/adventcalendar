@@ -25,6 +25,7 @@ public class Exercise07 {
      * @return HashMap, Like: {[A]=[C], [B]=[D], [C]=[E]}
      */
     String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
     public HashMap<String, String> generateCipher(int offset) {
         return (createCipher(alphabet, offset));
     }
@@ -40,17 +41,16 @@ public class Exercise07 {
         }
         for (int i = 0; i < alphabet.length(); i++) {
             char ch = alphabet.charAt(i);
-            if((char)(ch+offset)<(91)){
-            char cipherChar = ((char) (ch + offset));
-            transferAlphabet += cipherChar;
-            }
-            else{
-                char cipherChar = ((char) (ch + (offset-alphabet.length())));
+            if ((char) (ch + offset) < (91)) {
+                char cipherChar = ((char) (ch + offset));
+                transferAlphabet += cipherChar;
+            } else {
+                char cipherChar = ((char) (ch + (offset - alphabet.length())));
                 transferAlphabet += cipherChar;
             }
 
         }
-        HashMap<String, String> cipher=new HashMap<String, String>();
+        HashMap<String, String> cipher = new HashMap<String, String>();
         for (int i = 0; i < alphabet.length(); i++) {
             cipher.put(alphabet.substring(i, i + 1), transferAlphabet.substring(i, i + 1));
 
@@ -69,9 +69,9 @@ public class Exercise07 {
 
     public String encryptString(String message, HashMap cipher) {
 
-        String cipherChar= "";
+        String cipherChar = "";
         String encryptedString = "";
-        for (int i = 0; i < message.length() ; i++) {
+        for (int i = 0; i < message.length(); i++) {
             Character ch = message.charAt(i);
 
             cipherChar = cipher.get(ch.toString()).toString();
@@ -91,6 +91,7 @@ public class Exercise07 {
         }
         return null;
     }
+
     /**
      * Decrypts a encrypted String with the given cipher
      *
@@ -101,9 +102,9 @@ public class Exercise07 {
     public String decryptString(String encryptedMessage, HashMap cipher) {
 
 
-        String decryptedChar= "";
+        String decryptedChar = "";
         String decryptedString = "";
-        for (int i = 0; i < encryptedMessage.length() ; i++) {
+        for (int i = 0; i < encryptedMessage.length(); i++) {
             Character ch = encryptedMessage.charAt(i);
             String chString = ch.toString();
 
@@ -111,7 +112,7 @@ public class Exercise07 {
 
             decryptedString += decryptedChar;
 
-    }
+        }
         return decryptedString;
     }
 
