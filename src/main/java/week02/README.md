@@ -6,13 +6,13 @@ Main goal of this exercises for this week is to learn and exercise basic princip
 
 * Encapsulation
 * Polymorphism
-* inheritance
+* Inheritance
 
-Most of exercises are going to be build on analogy of a cars race.
+The exercises are going to be build on analogy of a cars race.
 
 #### Platuml
 
-PlantUML is an open-source tool allowing users to create UML diagrams from a plain text language. 
+PlantUML is an open-source tool allowing users to create UML diagrams from a plain text language. See http://plantuml.com/class-diagram
 
 Plugin for InteliJ:
 https://plugins.jetbrains.com/plugin/7017-plantuml-integrationIntelij
@@ -23,10 +23,11 @@ https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml
 ### Hints, requirements
  
  * Every exercise use the previous solution, so copy your implementation from one exercise to the next one.
- * Use `RacingGame` as the operational class through all exercises. That means we handle all racing stuff from this class.
+ * Use `RacingGame` as the operational class through all exercises - we handle all racing stuff from this class.
+ * Every method that is defined in the exercise must be _public_.
  * Consider class `Vehicle` and `Driver` to be 'immutable'.
- * Driver's starting number and vehicle's number has to be unique.
- * One driver can drive only one vehicle.`
+ * Driver's starting number and name has to be unique.
+ * One driver can drive only one vehicle.
  * One vehicle can be driven by only one driver.
  * Implement useful Getter and Setter methods.
 
@@ -34,11 +35,13 @@ https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml
 
 Implement basic class lineup.
 
- 1. Define Class `Driver` with following methods:    
+ 1. Define Class `Driver` with following methods:
+    * _Constructor_ => All needed attributes 
     * _getName()_ => returns Lastname, Firstname as String
     * _getStartingNumber()_ => returns the starting number as an int
     * _toString()_ => generates a String like '(1) Joe Cewl' 
  2. Define Class `Vehicle` with following  methods:
+    * _Constructor_ => All needed attributes
     * _getManufacturer()_ - returns the manufacturer like 'Skoda' as String
     * _getName()_ - returns the vehicle name like 'Fabia' as String
     * _getHorsepower()_ - returns the engines horsepower as int
@@ -62,12 +65,13 @@ Implement different types of vehicle.
  Generate a CompetitorsList which holds a Competitor with a Driver and Vehicle.
   
   1. Create class `CompetitorsGenerator`, which randomly generates drivers and related vehicles as a `Competitor`.
-  2. Create class `Competitor` storing assigment `Vehicle`=>`Driver` with:
-  * _getPoints()_ => returns the actual points as int
-  * _addPoints(int)_ => add's points from a race
+  2. Create class `Competitor` storing the assigment of the derived classes of `Vehicle` and `Driver` with:
+     * _getPoints()_ => returns the actual points as int
+     * _addPoints(int)_ => add's points from a race
   3. Create class `CompetitorsList` storing `Competitor`:
-  * _getCompetitors()_ => which returns a list of `Competitor`
-  * _toString()_ => method, which concatenate the contained toString() methods. This will generate a String like '[Points] [Driver] [Vehicle]'
+     * _addCompetitor(Competitor competitor)_
+     * _getCompetitors()_ => which returns a list of `Competitor`
+     * _toString()_ => method, which concatenate the contained toString() methods. This will generate a String like '[Points] [Driver] [Vehicle]'
   4. Add useful unit tests
   5. Visualize created classes with plantuml as class diagram, inclusive associations.
   
@@ -76,8 +80,8 @@ Implement different types of vehicle.
   Implement the race with it's starting lineup.
    
   1. Add and implement following methods to class `Race`:
-      * _addCompetitor(Competitor competitor)_
       * _generateStartingLineup()_ => in the 1st race, the starting lineup is ordered by _drivers last name_, _drivers first name_, _vehicles manufacturer_.
+      * _getStartingLineup()_ => returns the ordered `CompetitorsList`.
       * _toString()_ => starting lineup as String, like '[Position in StartingLineup] [Competitor]'
   2. Add useful unit tests
   3. Visualize created classes with plantuml as class diagram, inclusive associations.
@@ -87,12 +91,13 @@ Implement different types of vehicle.
   Let'em race!
    
   1. Add and implement following methods to class `Race`:
+      * enhance the constructor with the last result so that the starting lineup can be setup correctly.
       * _race()_ => run's the race - generate the final placement randomly
       * _getResult()_ => race result as an ordered list of competitors. The list is ordered by the placement, like 1s is first, 2nd is second, ....
       * _toString()_ => race result as string, like '[Result Position] [Competitor]'
   2. Store the race result points to the `Competitor`
-      * for the first place the driver gets '[amount of drivers] * 2' points
-      * on other placements gives the drivers '[amount of drivers] * 1' points
+      * for the first place the driver gets '[count of drivers - place + 1] * 2' points
+      * all other placements gives the drivers '[count of drivers - place + 1] * 1' points
   3. Generate the next starting lineup from the drivers last race position.
   4. Add useful unit tests
   3. Visualize created classes with plantuml as class diagram, inclusive associations.
