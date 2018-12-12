@@ -22,15 +22,15 @@ public class Exercise10 {
         String[] arrOfString = calculate.split("()");
         //System.out.println(calculate);
 
-        int number1 = Integer.valueOf(arrOfString[0]);
-        String operator = arrOfString[1];
-        int number2 = Integer.valueOf(arrOfString[2]);
+        int number1 = Integer.parseInt(arrOfString[0]);
+        //String operator = arrOfString[1];
+        int number2 = Integer.parseInt(arrOfString[2]);
+        //int number3 = Integer.parseInt(arrOfString[3]);
 
-        if (operator == "+") {
-            System.out.println(number1 + number2);
+        //if (operator == "+") {
             result = number1 + number2;
-        }
-        return 1;
-
+            //System.out.println(number1 + number2);
+        //}
+        return result;
     }
 }
