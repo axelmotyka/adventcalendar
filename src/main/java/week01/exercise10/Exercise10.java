@@ -17,6 +17,20 @@ public class Exercise10 {
 
     public int run(String calculate) {
 
+        int result;
+
+        String[] arrOfString = calculate.split("()");
+        //System.out.println(calculate);
+
+        int number1 = Integer.valueOf(arrOfString[0]);
+        String operator = arrOfString[1];
+        int number2 = Integer.valueOf(arrOfString[2]);
+
+        if (operator == "+") {
+            System.out.println(number1 + number2);
+            result = number1 + number2;
+        }
         return 1;
+
     }
 }
