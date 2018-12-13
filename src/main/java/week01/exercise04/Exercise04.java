@@ -34,9 +34,7 @@ public class Exercise04 {
             // Replace (delete) all punctuation in the word.
             for (x = 0; x < punctuation.length; x++) {
                 wordsText[i] = wordsText[i].replace(punctuation[x], "");
-                //x++;
             }
-            //i++;
         }
 
         // Find the longest word in the list of words, where words are cleaned up from punctuation.

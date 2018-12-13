@@ -15,7 +15,8 @@ public class Exercise06 {
     public int[][] run(int[][] x, int[][] y) {
         log.info("Run()");
 
-        int[][] result = new int[5][5];
+        int[][] result = new int[x.length][x[0].length]; // x.length (Anzahl Reihen in Matrix) soll die Anzahl Reihen der neuen Liste sein.
+        //x[0].length (Anzahl der Spalten in der ersten Reihe) soll die Anzahl der Spalten sein.
 
         for (int i = 0; i < x.length; i++) {
             for (int j = 0; j < x.length; j++) {
