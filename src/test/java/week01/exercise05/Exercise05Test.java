@@ -24,4 +24,22 @@ public class Exercise05Test {
         assertEquals("Letters are wrong!", "gvO Ujnft!", tester.run(text));
 
     }
+    @Test
+    public void runMethodTest03() {
+        Exercise05 tester = new Exercise05();
+
+        String text = "zzz!";
+
+        assertEquals("Letters are wrong!", "AAA!", tester.run(text));
+
+    }
+    @Test
+    public void runMethodTest04() {
+        Exercise05 tester = new Exercise05();
+
+        String text = "ddd!";
+
+        assertEquals("Letters are wrong!", "EEE!", tester.run(text));
+
+    }
 }

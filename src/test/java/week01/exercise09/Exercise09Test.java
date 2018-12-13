@@ -8,7 +8,7 @@ public class Exercise09Test {
 
     @Test
     public void shortStringTest() {
-        Exercise09 tester = new Exercise09();
+        Exercise09_neu tester = new Exercise09_neu();
 
         String message = "hallo";
 
@@ -17,7 +17,7 @@ public class Exercise09Test {
 
     @Test
     public void LongStringTest() {
-        Exercise09 tester = new Exercise09();
+        Exercise09_neu tester = new Exercise09_neu();
 
         String message = "hallo devacademy richtig sortiert steht das z am ende";
 

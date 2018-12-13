@@ -17,55 +17,51 @@ public class Exercise05 {
         //String[] letters= text.split("");
         int textLength = text.length();
 
-        char[] alphabet = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
-        char[] punct = {'!', '#', '$', '%', '&', ',', '-', '.', '/', ':', ';', '<', '=', '>', '@', ']', '_', '`', '}', '~'};
-        char[] vowel = {'a', 'e', 'i', 'o', 'u'};
-        char[] vowelUpper = {'A', 'E', 'I', 'O', 'U'};
         String result = "";
+
         for (int i = 0; i < textLength; i++) {
-            int x = 0;
-            while (x < alphabet.length)
-                if (alphabet[x] == text.charAt(i)) {
-                    if (vowel[0] == alphabet[x+1] ){
-                    result = result + vowelUpper[0];
-                    }
-                    else if (vowel[1] == alphabet[x+1] ){
-                        result = result + vowelUpper[1];
-                    }
-                    else if (vowel[2] == alphabet[x+1] ){
-                        result = result + vowelUpper[2];
-                    }
-                    else if (vowel[3] == alphabet[x+1] ){
-                        result = result + vowelUpper[3];
-                    }
-                    else if (vowel[4] == alphabet[x+1] ){
-                        result = result + vowelUpper[4];
-                    }
-                    else {
-                        result = result + alphabet[x+1];
+            if (((Character) (text.charAt(i))).toString().matches("[a-z]")
+            ||((Character) (text.charAt(i))).toString().matches("[\\p{Punct}]")
+            ||(text.charAt(i)== ' ')) {
 
-                    }
-                    break;
-                } else if (punct[x] == text.charAt(i)) {
-                    result = result + punct[x];
+                if (text.charAt(i) == 'z') {
+                    result = result + 'A';
 
-                    break;
-                } else if (' ' == text.charAt(i)) {
-                    result = result + ' ';
-                    break;
-                } else {
-                    x++;
+                } else if (text.charAt(i) + 1 == 'e') {
+                    result = result + 'E';
+
+                } else if (text.charAt(i) + 1 == 'i') {
+                    result = result + 'I';
+
+                } else if (text.charAt(i) + 1 == 'o') {
+                    result = result + 'O';
+
+                } else if (text.charAt(i) + 1 == 'u') {
+                    result = result + 'U';
 
                 }
+                else if (((Character) (text.charAt(i))).toString().matches("[\\p{Punct}]")) {
+                    result = result + text.charAt(i);
 
-                
+                }
+                else if (text.charAt(i)== ' ') {
+                    result = result + ' ';
+
+                }
+                else {
+                    result = result + ((char)(text.charAt(i) + 1));
+
+                }
+            }
+
+            //result = result + text.charAt(i);
 
         }
-
-
-
 
         text = result;
         return text;
     }
+
+
 }
+
