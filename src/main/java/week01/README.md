@@ -46,14 +46,21 @@ Additionally you must implement the unit test!
 |A51 A52 A53 A54 A55|       |B51 B52 B53 B54 B55|       |A51*B51 A52*B52 A53*B53 A54*B54 A55*B55|
 ```
 ### Exercise 07 - Caesar cipher
-The Caesar cipher is one of the earliest known and simplest ciphers. It is a type of substitution cipher in which each letter in the plaintext is 'shifted' a certain number of places down the alphabet. For example, with a shift of an offset of `1`, `A` would be replaced by `B`, `B` would become `C`, and so on. 
+The Caesar cipher is one of the earliest known and simplest ciphers. It is a type of substitution cipher in which each letter in the plaintext is 'shifted' a certain number of places down the alphabet. 
+
+For example, with a shift of an offset of `1`, `A` would be replaced by `B`, `B` would become `C`, and so on. 
+If you move over the end of the alphabet, move on from the beginning. That means with an offest of `1`, `Z` would become `A`.
+
+Use only UpperCase letters!
+
 The method is named after Julius Caesar, who apparently used it to communicate with his generals.
+
 Implement and test the following functions:
 ```
     /**
      * Generate the cipher as a HashMap.
      * @param offset offset for the alphabet cipher
-     * @return HashMap, Like: {[a]=[c], [b]=[d], [c]=[e]}
+     * @return HashMap, Like: {[A]=[C], [B]=[D], [C]=[E]}
      */
     public HashMap<String,String> generateCipher(int offset) {
         return new HashMap<String,String>();
@@ -100,7 +107,7 @@ _A good overview can be found here_ http://www.linux-related.de/index.html?/codi
 Write a small calculator application, which takes a String and computes the result.
 The following arithmetic operations are allowed: `+`, `-`, `*`, `/`, `^2(x)` and `sqr(x)`.
 Check the right order by using parentheses. 
-The result should be rounded off to the second decimal place.
+The result is always an Integer - also the result of a division is rounded to an integer.
 
 Setup a method for every aritmethic operation and write tests for them.
 The input are Strings like this:

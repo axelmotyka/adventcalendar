@@ -38,8 +38,8 @@ You can easily run those Tests by using IntelliJ or Visual Studio Code(add `Java
 | ? | ? |
 
 
-# Week 1 - 03.12. - 07.12.
+# Week 1 - 03.12.2018 - 07.12.2018
 [Goto](./src/main/java/week01)
 
-# Week 2 - 10.12. - 14.12.
+# Week 2 - 13.12.2018 - 11.01.2019
 [Goto](./src/main/java/week02)

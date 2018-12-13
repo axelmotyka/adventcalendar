@@ -79,9 +79,9 @@ public class Exercise07 {
                 // all upper case should be translated into lower cases
                 if ((int)chars[x] >= 65 && (int)chars[x] <=  122 )
                 {
-                   chars[x]=  (char) (int)(chars[x]+32);
+                    chars[x]=  (char) (int)(chars[x]+32);
 
-                   chars[x] = (cipher.get(Character.toString(chars[x]))).toString().toCharArray()[0];
+                    chars[x] = (cipher.get(Character.toString(chars[x]))).toString().toCharArray()[0];
                 }
             }
             else
