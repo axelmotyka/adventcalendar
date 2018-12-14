@@ -1,0 +1,26 @@
+@startuml
+class Vehicle{
+ String manufacturer
+ String name
+ int horsepower
+ eval engineType
+ Engintype engin
+ String getManufacturer()
+ String getName()
+ int getHorsepower()
+ Engintype getEnginType()
+ String toString()
+}
+
+Class Driver{
+  String firstname
+  String lastname
+  int StartingNumber
+  String getName()
+  int getStartingNumber()
+  String toString()
+}
+
+Class RacingGame{
+ }
+@endum
