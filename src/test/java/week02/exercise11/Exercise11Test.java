@@ -4,7 +4,8 @@ import org.junit.Test;
 
 
 import static org.junit.Assert.assertEquals;
-import static week02.exercise11.Vehicle.engineType.*;
+import static week02.exercise11.Vehicle.engineType.gasoline;
+
 
 public class Exercise11Test {
 
@@ -68,7 +69,7 @@ public class Exercise11Test {
 
 
 
-        assertEquals("Wrong result!", Vehicle.engineType.gasoline, tester.getEngineType());
+        assertEquals("Wrong result!", gasoline, tester.getEngineType());
     }
 
     @Test
@@ -78,7 +79,7 @@ public class Exercise11Test {
 
 
         assertEquals("Wrong result!", "Toyota Verso,"
-                + Vehicle.engineType.gasoline + "," + 100
+                + gasoline + "," + 100
                 + "hps", tester.toString());
     }
 

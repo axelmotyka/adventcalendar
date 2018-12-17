@@ -1,0 +1,46 @@
+@startuml
+MotorCycle --|> Vehicle
+Trike--|> Vehicle
+class Vehicle{
+ String manufacturer
+ String name
+ int horsepower
+ eval engineType
+ Engintype engin
+ String getManufacturer()
+ String getName()
+ int getHorsepower()
+ Engintype getEnginType()
+ String toString()
+}
+
+Class Driver{
+  String firstname
+  String lastname
+  int StartingNumber
+  String getName()
+  int getStartingNumber()
+  String toString()
+}
+
+Class MotorCycle{
+eval Windshield
+Windshield Shield
+
+Windshield getShield()
+String toString()
+
+}
+
+Class Trike{
+eval RoofType
+Rooftype roof
+
+Windshield getRoof()
+String toString()
+
+}
+
+Class RacingGame{
+ }
+@endum
