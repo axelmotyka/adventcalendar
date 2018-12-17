@@ -27,13 +27,21 @@ public class Exercise05 {
         // Iterate through each character in the array "characters".
         for (int i = 0; i < characters.length; i++) {
             char character = characters[i];
+            int characterAscii = character;
+
             // Skip punctuation and blanks.
             if (Character.isSpaceChar(character)) {
-                continue;
-            } else {
+                characters[i] = ' ';
+            }
+            else if(character == 'z'){
+                characters[i] = 'a';
+                }
+            else if(character == 'Z'){
+                characters[i] = 'A';
+            }
+            else {
                 if (Character.isLetter(character)) {
                     // Check up the characters ASCII code and take it to find the next character.
-                    int characterAscii = character;
                     // Add 1 to characterAscii in order to create the ASCII code for the next character.
                     int characterNextAscii = characterAscii + 1;
                     char characterNext = (char) characterNextAscii;
@@ -41,6 +49,7 @@ public class Exercise05 {
                 }
             }
         }
+        // Traverse trough the array of characters again. If a character is a vowel, then change it to upper case letter.
         for (int j = 0; j < characters.length; j++) {
             char characterToUpper = characters[j];
 
