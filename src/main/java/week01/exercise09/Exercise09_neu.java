@@ -1,5 +1,6 @@
 package week01.exercise09;
 
+import java.io.OptionalDataException;
 import java.util.logging.Logger;
 
 /**
@@ -10,57 +11,69 @@ import java.util.logging.Logger;
  * Implement your own QuickSort.
  */
 public class Exercise09_neu {
+    //String text;
+    char[] textToChar;
+    int[] textToInt;
+
+    String result = "";
+    int l;
+    int r;
+    int i = l - 1, j = r, tmp;
     private static final Logger log = Logger.getLogger(Exercise09_neu.class.getName());
 
-    public String run(String text) {
-        log.info(String.format("Run(\"%s\")", text));
+    public void quicksort(int[] textToInt,int l,int r){        //textToInt=Array, l=linker Rand, r=rechter Rand
 
-        char[] textToCharr = text.toCharArray();
-        int[] textToInt = new int[textToCharr.length];
-        char[] resultArray = new char[textToCharr.length];
-        String result = "";
-
-        for (int i = 0; i < textToCharr.length; i++
-        ) {
-            textToInt[i] = ((int) (textToCharr[i]));
-            System.out.println(textToInt[i]);
-        }/*
-        int l;
-        int r;
-        //quicksort(textToInt, 10, 6);
-        //text
-        //int pivot = textToInt[0];
-
-        public void quicksort(((int[]) textToInt),((int) l),((int) r)){        //textToInt=Array, l=linker Rand, r=rechter Rand
-            //textToInt= text.toCharArray();
-
-            if (r > l) {                            //solange mehr als 1 Folgenelement existiert
-                int i = l - 1, j = r, tmp;            //Variableninitialisierung mit Folgenrändern
-                for (; ; ) {                        //Endlosschleife; bricht ab, wenn i>=j
-                    while (textToInt[++i] < textToInt[r]) ;            //inkrem., bis größeres  Element gefunden wird
-                    while (textToInt[--j] > textToInt[r] && j > i);        //dekrem., bis kleineres Element gefunden wird
-                    if (i >= j) break;                    //brich ab, wenn sich die Folgenzeiger treffen
-                    tmp = textToInt[i];
-                    textToInt[i] = textToInt[j];
-                    textToInt[j] = tmp;    //tausche kleineres mit größerem Element
-                }
-
+        if (r > l) {                            //solange mehr als 1 Folgenelement existiert
+            //Variableninitialisierung mit Folgenrändern
+            for (; ; ) {                        //Endlosschleife; bricht ab, wenn i>=j
+                while (textToInt[++i] < textToInt[r]) ;            //inkrem., bis größeres  Element gefunden wird
+                while (textToInt[--j] > textToInt[r] && j > i)
+                    ;        //dekrem., bis kleineres Element gefunden wird
+                if (i >= j) break;                    //brich ab, wenn sich die Folgenzeiger treffen
                 tmp = textToInt[i];
-                textToInt[i] = textToInt[r];
-                textToInt[r] = tmp;        //tausche Trennelement
-
-                //quicksort(textToInt, l, i-1);			//rekursiver Aufruf für linke Teilfolge
-                //quicksort(textToInt, i+1, r);			//rekursiver Aufruf für rechte Teilfolge
+                textToInt[i] = textToInt[j];
+                textToInt[j] = tmp;    //tausche kleineres mit größerem Element
             }
-        }*/
-        for (int i = 0; i < textToCharr.length; i++
+
+            tmp = textToInt[i];
+            textToInt[i] = textToInt[r];
+            textToInt[r] = tmp;        //tausche Trennelement
+
+            quicksort(textToInt, l, i-1);			//rekursiver Aufruf für linke Teilfolge
+            quicksort(textToInt, i+1, r);			//rekursiver Aufruf für rechte Teilfolge
+        }
+        char[] resultArray=new char[textToInt.length];
+        for (int i = 0; i < textToChar.length; i++
         ) {
             resultArray[i] = ((char) (textToInt[i]));
             result += resultArray[i];
         }
 
-        return result;
     }
+
+    public int[] getChar(String text){
+        //char[] textToChar = new char[text.toCharArray().length];
+        textToChar = text.toCharArray();
+        textToInt = new int[textToChar.length];
+
+        for (int i = 0; i < textToChar.length; i++
+        ) {
+            textToInt[i] = ((int) (textToChar[i]));
+            //System.out.println(textToInt[i]);
+        }
+        return textToInt;
+    }
+
+    public String run(String text) {
+        log.info(String.format("Run(\"%s\")", text));
+        quicksort(getChar(text), i, r);
+
+
+        System.out.println(result);
+        return result;
+
+    }
+
 
 
 }
