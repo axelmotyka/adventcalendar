@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 public class Exercise06Test {
 
     @Test
-    public void runMethodTest() {
+    public void runMethodTest5times5() {
         Exercise06 tester = new Exercise06();
 
         // Matrix x:
@@ -45,5 +45,40 @@ public class Exercise06Test {
         }
 
     }
+
+    @Test
+    public void runMethodTest3times3() {
+        Exercise06 tester = new Exercise06();
+
+        // Matrix x:
+        int[][] x = new int[][]{
+                { 7, 2, 3 },
+                { 5, 6, 11 },
+                { 93, 4, 8 },
+        };
+
+        // Matrix y:
+        int[][] y = new int[][]{
+                { 6, 5, 12 },
+                { 13, 6, 7 },
+                { 1, 10, 6 },
+        };
+
+        // Result, matrix expected:
+        int[][] expected = new int[][]{
+                { 42, 10, 36 },
+                { 65, 36, 77 },
+                { 93, 40, 48 },
+        };
+
+        assertEquals("Wrong length in y-axis!", 3, tester.run(x, y).length);
+        for(int i=0; i<expected.length; i++) {
+            assertEquals("Wrong length in x-axis!", 3, tester.run(x, y)[i].length);
+            assertArrayEquals("Wrong value in y-axis[" + i + "]:", expected[i], tester.run(x, y)[i]);
+
+        }
+
+    }
+
 
 }
