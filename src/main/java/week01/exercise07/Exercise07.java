@@ -22,7 +22,9 @@ public class Exercise07 {
     // This is my cipher as a HashMap (diese HashMap ist ein "dictionary" mit String-String als Key-Value-Paaren.
     public HashMap<String,String> generateCipher(int offset) {
         HashMap<String, String> toll = new HashMap<>();
-
+        if(offset > 26){
+            offset = offset % 26;
+        }
         for (char alphabet = 'A'; alphabet <= 'Z'; alphabet++) {
             //System.out.println(alphabet);
             char key = alphabet; // The key in our HashMap is a character from the alphabet.

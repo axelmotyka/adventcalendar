@@ -42,6 +42,16 @@ public class Exercise07Test {
         assertEquals("check cipher", "Y", resultMinus3.get("B"));
         assertEquals("check cipher", "V", resultMinus3.get("Y"));
         assertEquals("check cipher", "W", resultMinus3.get("Z"));
+    }
+    @Test
+    public void generateCipherTest2() {
+        Exercise07 tester = new Exercise07();
+        HashMap<String, String> resultPlus35 = tester.generateCipher(35);
+        System.out.println(resultPlus35);
+        assertEquals("check cipher", "J", resultPlus35.get("A"));
+        assertEquals("check cipher", "K", resultPlus35.get("B"));
+        assertEquals("check cipher", "H", resultPlus35.get("Y"));
+        assertEquals("check cipher", "I", resultPlus35.get("Z"));
 
     }
 
