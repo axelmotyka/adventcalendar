@@ -12,6 +12,7 @@ public class Exercise11Test {
         Driver tester = new Driver();
         String firstName = "Michael";
         String lastName = "Schumacher";
+
         assertEquals("Create new instance of a Driver", "Michael Schumacher", tester.driver(firstName, lastName));
 
         assertEquals("Return the Name of the new Driver", "Schumacher, Michael", tester.getName());
@@ -28,6 +29,7 @@ public class Exercise11Test {
         String vehicleName = "Fabia";
         int horsePower = 25;
         String engineType = "gasoline";
+
         assertEquals("Create new instance of a Vehicle", "Skoda Fabia 25 gasoline", tester.vehicle(manufactor, vehicleName, horsePower, engineType));
 
         assertEquals("Get manufacturer of a Vehicle","'Skoda'", tester.getManufacturer());

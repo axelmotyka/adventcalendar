@@ -1,0 +1,67 @@
+@startuml
+
+RacingGame.Driver ---|> Driver
+RacingGame.Vehicle ---|> Vehicle
+
+
+class Driver {
+==Class Attributes==
+{int} startingNumber
+{String} firstName
+{String} lastName
+
+
+==Class Methods==
+{method} +driver(String firstName, String lastName)
+return {String} this.firstName this.lastName
+
+{method} +getName()
+return {String} this.lastName, this.firstName
+
+{method} +getStartingNumber()
+return {int} this.startingNumber
+
+{method} +toString()
+return {String} (this.startingNumber) this.firstName this.lastName in singlequotes
+}
+
+
+class Vehicle{
+==Class Attributes==
+{String} manufactor
+{String} vehicleName
+{String} engineType
+{int} horsePower
+
+
+==Class Methods==
+
+{method} +vehicle(String manufactor, String vehicleName, int horsePower, String engineTypeString)
+creates new Instance of Vehicle
+return {String} this.manufactur this.vehicleName this.horsePower this.engineType
+
+{method} +getManufacturer()
+return {String} this.manufactur in singlequotes
+
+{method} +getName()
+return {String} this.vehicleName in singlequotes
+
+{method} +getHorsePower()
+return {int} this.horsePower
+
+{method} +getEngineType() return
+{String} RacingGame.Vehicle.engineTypeEnum.valueOf(this.engineType).toString() in singlequotes
+
+{method} +toString()
+return {String} this.manufactur this.vehicleName, RacingGame.Vehicle.engineTypeEnum.valueOf(this.engineType).toString(), this.horsePower hps  in singlequotes
+
+}
+
+enum engineTypeEnum {
+electric
+diesel
+gasoline
+}
+
+
+@enduml
