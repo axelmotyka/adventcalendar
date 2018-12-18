@@ -19,7 +19,7 @@ public class Exercise09Test {
     public void LongStringTest() {
         Exercise09 tester = new Exercise09();
 
-        String message = "hallo devacademy richtig sortiert steht das z am ende";
+        String message = "hallo devacademy richtig sortiert steht das z am ende $%&/";
 
         assertEquals("Wrong result!", "aaaaaccddddeeeeeeghhhiiillmmnoorrrssstttttvyz", tester.run(message));
     }
