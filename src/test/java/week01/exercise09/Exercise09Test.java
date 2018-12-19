@@ -8,7 +8,7 @@ public class Exercise09Test {
 
     @Test
     public void shortStringTest() {
-        Exercise09 tester = new Exercise09();
+        Exercise09_PairProgramming tester = new Exercise09_PairProgramming();
 
         String message = "hallo";
 
@@ -17,10 +17,11 @@ public class Exercise09Test {
 
     @Test
     public void LongStringTest() {
-        Exercise09 tester = new Exercise09();
+        Exercise09_PairProgramming tester = new Exercise09_PairProgramming();
 
-        String message = "hallo devacademy richtig sortiert steht das z am ende $%&/";
+        String message = "hallo devacademy richtig sortiert steht das z am ende";
 
         assertEquals("Wrong result!", "aaaaaccddddeeeeeeghhhiiillmmnoorrrssstttttvyz", tester.run(message));
     }
+
 }

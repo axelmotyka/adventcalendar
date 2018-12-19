@@ -1,8 +1,7 @@
 package week01.exercise09;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
+
 import java.util.logging.Logger;
 
 /**
@@ -31,8 +30,8 @@ public class Exercise09 {
         }
         // text.replace("[\\p{Punct}]","");
         System.out.println(textCleanNums);
-        quicksort(textCleanNums,l,r);
-
+        //quicksort(textCleanNums,l,r);
+/*
     public void quicksort(int[] a, l, r){		//a=Array, l=linker Rand, r=rechter Rand
             if(r>l){					//solange mehr als 1 Folgenelement existiert
                 int i=l-1, j=r, tmp;			//Variableninitialisierung mit Folgenrändern
@@ -46,8 +45,9 @@ public class Exercise09 {
 
                 quicksort(a, l, i-1);			//rekursiver Aufruf für linke Teilfolge
                 quicksort(a, i+1, r);			//rekursiver Aufruf für rechte Teilfolge
-            }
+            }*/
         return new String();
         }
     }
-}
+
+
