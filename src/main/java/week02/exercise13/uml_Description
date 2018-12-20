@@ -1,0 +1,86 @@
+@startuml
+MotorCycle --|> Vehicle
+Trike--|> Vehicle
+Competitor --|> CompetitiorGenerator
+CompetitiorGenerator --* Vehicle
+CompetitiorGenerator --* Driver
+
+
+class Vehicle{
+ String manufacturer
+ String name
+ int horsepower
+ eval engineType
+ Engintype engin
+ String getManufacturer()
+ String getName()
+ int getHorsepower()
+ Engintype getEnginType()
+ String toString()
+}
+
+Class Driver{
+  String firstname
+  String lastname
+  int StartingNumber
+  String getName()
+  int getStartingNumber()
+  String toString()
+}
+
+Class MotorCycle{
+eval Windshield
+Windshield Shield
+
+Windshield getShield()
+String toString()
+
+}
+
+Class Trike{
+eval RoofType
+Rooftype roof
+
+Windshield getRoof()
+String toString()
+
+}
+
+Class Competitor{
+int CompetitorPoints
+
+void addPoints()
+int getPoints()
+}
+
+Class CompetitiorGenerator{
+Vehicle VehicleName
+Driver DriverName
+String[] Firstname
+String[] SurName
+static int StarterNumber
+String[] ManufacturerName
+String[] Carname
+int HorsePower
+
+int GenerateRandom()
+String getCarName()
+int getHorsepower()
+EngineType getEngineType()
+String getDriverName()
+int getdriverStarterNumber()
+String toString
+
+}
+
+Class CompetitorList{
+List <Competitor>competitor
+
+void addCompetitor()
+List<Competitor> getCompetitor()
+String toString()
+}
+
+Class RacingGame{
+ }
+@enduml
