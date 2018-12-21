@@ -10,7 +10,7 @@ public class Exercise10Test {
     public void calculateTest01() {
         Exercise10 tester = new Exercise10();
 
-        String calculate = "1+1";
+        String calculate = "31+ 1";
 
         assertEquals("Wrong result!", 2, tester.run(calculate));
     }
