@@ -1,13 +1,5 @@
 package week02.exercise11;
 
-/*2. Define Class `Vehicle` with following  methods:
-        * _Constructor_ => All needed attributes
-        * _getManufacturer()_ - returns the manufacturer like 'Skoda' as String
-        * _getName()_ - returns the vehicle name like 'Fabia' as String
-        * _getHorsepower()_ - returns the engines horsepower as int
-        * _getEngineType_ - returns one of `[electric, diesel, gasoline]` as an Enum
-        * _toString()_ - returns the vehicle as String like 'Skoda Fabia, gasoline, 25hps'
-*/
 
 public class Vehicle {
   public enum EngineType {
@@ -16,6 +8,7 @@ public class Vehicle {
     gasoline
     ;
   }
+
 
   // Declaration of variables, which will be used in this class definition:
   private String manufacturer; // returns the manufacturer like 'Skoda' as String
@@ -62,10 +55,6 @@ public class Vehicle {
     Vehicle skodaFabia = new Vehicle("Skoda", "Fabia", 25, EngineType.gasoline);
     System.out.println(skodaFabia);
     //System.out.println(skodaFabia.getHorsepower());
-    Vehicle skodaFabia1 = new Vehicle("Skoda", "Fabia", 25, EngineType.diesel);
-    System.out.println(skodaFabia1);
-
-
   }
 }
 

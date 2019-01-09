@@ -32,7 +32,8 @@ public class Driver {
 
   // Main method - the starting point from this program.
   public static void main(String[] args) {
-
+    Driver nikiLauda = new Driver("Niki Lauda", 1);
+    System.out.println(nikiLauda);
 
 
   }
