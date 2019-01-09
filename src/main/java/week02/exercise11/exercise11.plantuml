@@ -19,6 +19,7 @@ title __EXERCISE11's Class Diagram__\n
   package week02.exercise11 {
     class RacingGame {
         + RacingGame()
+        {static} + main()
     }
   }
   

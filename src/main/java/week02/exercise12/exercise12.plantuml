@@ -48,6 +48,7 @@ title __EXERCISE12's Class Diagram__\n
         - color : String
         ~ Trike()
         + toString()
+        {static} + main()
     }
   }
   
