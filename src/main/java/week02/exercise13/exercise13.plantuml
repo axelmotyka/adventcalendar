@@ -6,6 +6,8 @@ title __EXERCISE13's Class Diagram__\n
     class Competitor {
         - points : int
         + Competitor()
+        + getDriver()
+        + getVehicle()
         + getPoints()
         + addPoints()
         + toString()
@@ -51,6 +53,19 @@ title __EXERCISE13's Class Diagram__\n
         - horn : boolean
         - hornAsText()
         ~ Motorcycle()
+        + toString()
+    }
+  }
+  
+
+  package week02.exercise13 {
+    class Race {
+        - competitors : List<Competitor>
+        + Race()
+        + addCompetitor()
+        + generateStartingLineup()
+        + getCompetitors()
+        + getStartingLineup()
         + toString()
     }
   }

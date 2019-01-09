@@ -2,8 +2,10 @@ package week02.exercise13;
 
 public class RacingGame {
     public RacingGame() {
-        // 1. line: Generates/constructs an object from class Driver and passes two arguments.
-        // 2. line: Prints out the content of the call of nikiLauda-method.
+
+        // 1. line: Generates/constructs an object from class Driver with two arguments. The result of the call is
+        // assigned to the variable "nikiLauda".
+        // 2. line: Prints out the content of variable "nikiLauda".
         Driver nikiLauda = new Driver("Niki Lauda", 1);
         System.out.println(nikiLauda);
 
@@ -16,7 +18,6 @@ public class RacingGame {
 
         Driver fernandoAlonso = new Driver("Fernando Alonso", 4);
         System.out.println(fernandoAlonso);
-
 
 
         Vehicle skodaFabia = new Vehicle("Skoda", "Fabia", 25, Vehicle.EngineType.gasoline);
@@ -47,10 +48,10 @@ public class RacingGame {
         System.out.println(list);
 
         Race race = new Race(list);
-        System.out.println("Unsorted Competitor / Race List");
+        System.out.println("Unsorted Competitor / Race List: ");
         System.out.println(race);
         race.generateStartingLineup();
-        System.out.println("Sorted Competitor / Race List");
+        System.out.println("Sorted Competitor / Race List: ");
         System.out.println(race);
 
     }
@@ -58,6 +59,5 @@ public class RacingGame {
 
     public static void main(String[] args) {
         RacingGame racingGame = new RacingGame();
-
     }
 }
