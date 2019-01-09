@@ -10,11 +10,18 @@ public class Competitor {
   private Driver driver;
   private Vehicle vehicle;
   private int points;
-
   public Competitor(Driver driver, Vehicle vehicle) {
     this.driver = driver;
     this.vehicle = vehicle;
     this.points = 0;
+  }
+
+  public Driver getDriver() {
+    return driver;
+  }
+
+  public Vehicle getVehicle() {
+    return vehicle;
   }
 
   public int getPoints() {

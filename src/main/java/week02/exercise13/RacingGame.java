@@ -46,6 +46,12 @@ public class RacingGame {
         list.addCompetitor(cg.getRandomCompetitor());
         System.out.println(list);
 
+        Race race = new Race(list);
+        System.out.println("Unsorted Competitor / Race List");
+        System.out.println(race);
+        race.generateStartingLineup();
+        System.out.println("Sorted Competitor / Race List");
+        System.out.println(race);
 
     }
 
