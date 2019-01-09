@@ -63,7 +63,6 @@ public class Vehicle {
     Vehicle skodaFabia1 = new Vehicle("Skoda", "Fabia", 25, EngineType.diesel);
     System.out.println(skodaFabia1);
 
-
   }
 }
 

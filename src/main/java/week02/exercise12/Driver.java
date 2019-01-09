@@ -7,6 +7,7 @@ package week02.exercise12;
     * _getStartingNumber()_ => returns the starting number as an int
     * _toString()_ => generates a String like '(1) Joe Cewl'
  */
+
 public class Driver {
   // Declaration of variables, which will be used in this class definition:
   private String name; // returns Lastname, Firstname as String
@@ -32,6 +33,5 @@ public class Driver {
   public String toString() {
     return driverText;
   }
-
 
 }

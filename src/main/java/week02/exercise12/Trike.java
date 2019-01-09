@@ -14,4 +14,9 @@ public class Trike extends Vehicle {
     // Returns the vehicle as String like 'Skoda Fabia, gasoline, 25hps'.
     return manufacturer + " " + name + ", " + engineType + ", " + horsepower + "hps" + ", " + color;
   }
+
+  public static void main(String[] args){
+    Trike trike = new Trike("Ford", "S-Max",139, EngineType.diesel,"grey");
+    System.out.println(trike);
+  }
 }

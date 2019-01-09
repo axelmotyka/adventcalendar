@@ -5,7 +5,7 @@ import java.awt.*;
 public class RacingGame {
     public RacingGame() {
         // 1. line: Generates/constructs an object from class Driver and passes two arguments.
-        // 2. line: Prints out the content of the call of nikiLaude-method.
+        // 2. line: Prints out the content of the call of nikiLauda-method.
         Driver nikiLauda = new Driver("Niki Lauda", 1);
         System.out.println(nikiLauda);
 
@@ -34,7 +34,6 @@ public class RacingGame {
 
         Tank tank = new Tank("Krauss Maffei", "Leolang", 90, Vehicle.EngineType.diesel, 500);
         System.out.println(tank);
-
 
     }
 
