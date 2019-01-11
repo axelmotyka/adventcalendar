@@ -35,12 +35,12 @@ https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml
 
 Implement basic class lineup.
 
- 1. Define Class `Driver` with following methods:
+ 1. Define Class `Driver` with following methods: (DONE)
     * _Constructor_ => All needed attributes 
     * _getName()_ => returns Lastname, Firstname as String
     * _getStartingNumber()_ => returns the starting number as an int
     * _toString()_ => generates a String like '(1) Joe Cewl' 
- 2. Define Class `Vehicle` with following  methods:
+ 2. Define Class `Vehicle` with following  methods: (DONE)
     * _Constructor_ => All needed attributes
     * _getManufacturer()_ - returns the manufacturer like 'Skoda' as String
     * _getName()_ - returns the vehicle name like 'Fabia' as String
