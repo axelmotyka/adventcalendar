@@ -1,35 +1,28 @@
 package week02.exercise15;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-/** Exercise14
- * + addCompetitor(Competitor competitor)
- * - generateStartingLineup() => in the 1st race, the starting lineup is ordered by drivers last name, drivers first name, vehicles manufacturer.
- * + getStartingLineup() => returns the ordered list of competitors.
- * + toString() => starting lineup as String, like '[Position in StartingLineup] [Competitor]'
- */
-
-/** Exercise15
- *  1. Add and implement following methods to class `Race`:
- *       * enhance the constructor with the last result so that the starting lineup can be setup correctly.
- *       * _race()_ => run's the race - generate the final placement randomly
- *       * _getResult()_ => race result as an ordered list of competitors. The list is ordered by the placement, like 1s is first, 2nd is second, ....
- *       * _toString()_ => race result as string, like '[Result Position] [Competitor]'
+/**
+ * Exercise15
+ * 1. Add and implement following methods to class `Race`:
+ * * enhance the constructor with the last result so that the starting lineup can be setup correctly.
+ * + _race()_ => run's the race - generate the final placement randomly
+ * + _getResult()_ => race result as an ordered list of competitors. The list is ordered by the placement, like 1s is first, 2nd is second, ....
+ * * _toString()_ => race result as string, like '[Result Position] [Competitor]'
  */
 
 public class Race {
 
+  // Variables in this class.
   private List<Competitor> competitors;
-  private List<Competitor> finalPlacement; // Variable for a list with the final placement.
+  private List<Competitor> startingLineup = new ArrayList<>();
+  private List<Competitor> raceResult = new ArrayList<>();
 
-  public Race(CompetitorList list) {
+  // Method "Race" enhanced with the competitors final placement.
+  public Race(CompetitorList list) { // ??? Wie war das nochmals: Eine Methode Race innerhalb Klasse Race???
     this.competitors = list.getCompetitors();
-    this.finalPlacement = getFinalPlacement(); // constructor enhanced with the final placement.
   }
 
   public void addCompetitor(Competitor competitor) {
@@ -48,7 +41,7 @@ public class Race {
     Stream<Competitor> personStream = competitors.stream().sorted(comparator);
 
     // Make sure that the output is as expected:
-    competitors = personStream.collect(Collectors.toList());
+    startingLineup = personStream.collect(Collectors.toList());
   }
 
   public List<Competitor> getCompetitors() {
@@ -56,31 +49,39 @@ public class Race {
   }
 
   public List<Competitor> getStartingLineup() {
-    return competitors;
+    return startingLineup;
   }
 
-  public void race(List<Competitor> getCompetitors()) { // Method "race" gets as argument the randomly selected list of competitors.
-
-    Random rand = new Random();
-    String randomDriverPlacement = driverNames.get(rand.nextInt(driverNames.size()));
-    placementNumber++;
-    return new finalPlacement(randomDriverPlacement, placementNumber);
-
-    /*
-    private Driver getRandomDriver() {
-      List<String> driverNames = Arrays.asList("Niki", "Michael", "Louis", "Peter", "Harald", "Gaby", "Petra", "Hans");
-      Random rand = new Random();
-    } */
-
-
-
+  // The method "race" selects from a list of drivers randomly the drivers final placement. Therefore it gets passed
+  // the randomly generated starting line-up.
+  //
+  public void race() {
+    raceResult = new ArrayList<>(startingLineup);
+    Collections.shuffle(raceResult);
+//    2. Store the race result points to the `Competitor`
+//            * for the first place the driver gets '[count of drivers - place + 1] * 2' points
+//            * all other placements gives the drivers '[count of drivers - place + 1] * 1' points
+//    3. Generate the next starting lineup from the drivers last race position.
+      for (int place = 0; place < raceResult.size(); place++) {
+        if (place == 0){
+          raceResult.get(0).addPoints((raceResult.size() - 1 + 1) * 2);
+        } else {
+          raceResult.get(place).addPoints((raceResult.size() - (place+1) + 1));
+        }
+      }
+      startingLineup = raceResult;
   }
+
+  public List<Competitor> getResult() {
+    return raceResult;
+  }
+
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     for (Competitor competitor : competitors) {
-      sb.append(getFinalPlacement() + " " + competitor.getDriver().getName() + " " + "; ");
+      sb.append(" " + competitor.getDriver().getName() + " " + "; ");
     }
     return sb.toString();
   }
