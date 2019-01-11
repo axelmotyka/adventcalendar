@@ -20,11 +20,77 @@ title __MESUTSRECAP's Class Diagram__\n
   
 
   package MesutsRecap {
+    class Motorcycle {
+        + Motorcycle()
+        + getColor()
+        + getType()
+        + toString()
+        {static} + main()
+    }
+  }
+  
+
+  package MesutsRecap {
+    enum MotorcyleType {
+      Allrounder
+      Chopper
+      Dirtbike
+      Custombike
+      Motocross
+      Enduro
+    }
+  }
+  
+
+  package MesutsRecap {
+    enum ColorType {
+      black
+      white
+      red
+      green
+      blue
+      magenta
+    }
+  }
+  
+
+  package MesutsRecap {
+    class Tractor {
+        + Tractor()
+        + getSize()
+        + getType()
+        + toString()
+        {static} + main()
+    }
+  }
+  
+
+  package MesutsRecap {
+    enum TractorType {
+      Classic
+      CabinLux
+      Robotics
+    }
+  }
+  
+
+  package MesutsRecap {
+    enum TractorSize {
+      quad
+      small
+      medium
+      large
+      xlarge
+      mega
+    }
+  }
+  
+
+  package MesutsRecap {
     class Vehicle {
         - manufacturer : String
         - name : String
         - horsepower : int
-        - vehicleText : String
         + Vehicle()
         + getManufacturer()
         + getName()
@@ -46,6 +112,16 @@ title __MESUTSRECAP's Class Diagram__\n
   }
   
 
+  Motorcycle -up-|> Vehicle
+  Motorcycle o-- ColorType : color
+  Motorcycle o-- MotorcyleType : type
+  Motorcycle +-down- MotorcyleType
+  Motorcycle +-down- ColorType
+  Tractor -up-|> Vehicle
+  Tractor o-- TractorType : type
+  Tractor o-- TractorSize : size
+  Tractor +-down- TractorType
+  Tractor +-down- TractorSize
   Vehicle o-- EngineType : engineType
   Vehicle +-down- EngineType
 
