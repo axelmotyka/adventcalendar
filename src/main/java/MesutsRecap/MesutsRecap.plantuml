@@ -3,6 +3,44 @@
 title __MESUTSRECAP's Class Diagram__\n
 
   package MesutsRecap {
+    class Competitor {
+        - points : int
+        + Competitor()
+        + getDriver()
+        + getVehicle()
+        + getPoints()
+        + setPoints()
+        + toString()
+        {static} + main()
+    }
+  }
+  
+
+  package MesutsRecap {
+    class CompetitorList {
+        - competitors : List<Competitor>
+        + addCompetitor()
+        + getCompetitors()
+        + toString()
+        {static} + main()
+    }
+  }
+  
+
+  package MesutsRecap {
+    class CompetitorsGenerator {
+        - startingNumber : int
+        - drivers : List<String>
+        - vehicles : List<String>
+        - getRandomDriver()
+        - getRandomVehicle()
+        + getRandomCompetitor()
+        {static} + main()
+    }
+  }
+  
+
+  package MesutsRecap {
     class Driver {
         - firstname : String
         - lastname : String
@@ -112,6 +150,8 @@ title __MESUTSRECAP's Class Diagram__\n
   }
   
 
+  Competitor o-- Driver : driver
+  Competitor o-- Vehicle : vehicle
   Motorcycle -up-|> Vehicle
   Motorcycle o-- ColorType : color
   Motorcycle o-- MotorcyleType : type

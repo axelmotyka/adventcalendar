@@ -14,23 +14,23 @@ public class Competitor {
     this.points = 0;
   }
 
-  // Getter method for the VAR driver:
+  // Getter method for the VAR driver. Liefert den Inhalt der VAR "driver" vom Typ/Klasse "Driver".
   public Driver getDriver() {
     return driver;
   }
 
-  // Getter method for the VAR vehicle:
+  // Getter method for the VAR vehicle. Liefert den Inhalt der VAR "vehicle" vom Typ/Klasse "Vehicle".
   public Vehicle getVehicle() {
     return vehicle;
   }
 
-  // Getter method for the VAR points: returns the actual points as int
+  // Getter method for the VAR points. Returns the actual points as int.
   public int getPoints() {
     return points;
   }
 
-  // Setter method for the VAR points: add's points from a race
-  // Beim Aufrufen dieser set-Methode wird eine bestimmte Punktzahl als Parameterwert reingegeben, welcher mit dem
+  // Setter method for the VAR points. Add's points from a race.
+  // Beim Aufrufen dieser setter-Methode wird eine bestimmte Punktzahl als Parameterwert reingegeben, welcher mit dem
   // aktuellen Wert der den Wert VAR points addiert werden soll. Danach ist die VAR Points aktualisiert.
   public void setPoints(int points) {
     this.points += points;
