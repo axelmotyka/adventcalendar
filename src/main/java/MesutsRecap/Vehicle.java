@@ -21,7 +21,7 @@ public class Vehicle {
   private String manufacturer; // returns the manufacturer like 'Dodge' as String.
   private String name; //returns the vehicle name like 'Charger' as String.
   private int horsepower; // returns the engines horsepower as int, e.g. 452hsp.
-  private EngineType engineType;
+  public EngineType engineType;
 
   // Constructor of the class Vehicle: Bekommt Parameterwerte übergeben, die beim erzeugen benutzt werden.
   public Vehicle(String manufacturer, String name, int horsepower, EngineType engineType) {

@@ -48,5 +48,7 @@ public class Tractor extends Vehicle{
   public static void main(String[] args) {
     Tractor myFirstTractor = new Tractor("New Holland", "Black Farmer", 69, EngineType.diesel, TractorType.Robotics, TractorSize.xlarge);
     System.out.println(myFirstTractor);
+    System.out.println(myFirstTractor.getType());
+    System.out.println(myFirstTractor.getSize());
   }
 }

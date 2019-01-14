@@ -54,8 +54,8 @@ Implement basic class lineup.
 
 Implement different types of vehicle.
  
- 1. Derive different types of vehicles from the base class `Vehicle`, like a _motorcycle_ or a _trike_.
- 2. Add specific attributes to each of the new derived classes.
+ 1. Derive different types of vehicles from the base class `Vehicle`, like a _motorcycle_ or a _trike_. (DONE)
+ 2. Add specific attributes to each of the new derived classes. (DONE)
  4. Add get methods for the new attributes
  5. Enhance toString() method with the new attributes 
  3. Visualize created classes with plantuml as class diagram, inclusive associations.
@@ -64,8 +64,8 @@ Implement different types of vehicle.
  
  Generate a CompetitorsList which holds a Competitor with a Driver and Vehicle.
   
-  1. Create class `CompetitorsGenerator`, which randomly generates drivers and related vehicles as a `Competitor`.
-  2. Create class `Competitor` storing the assigment of the derived classes of `Vehicle` and `Driver` with:
+  1. Create class `CompetitorsGenerator`, which randomly generates drivers and related vehicles as a `Competitor`. (DONE)
+  2. Create class `Competitor` storing the assigment of the derived classes of `Vehicle` and `Driver` with: (DONE)
      * _getPoints()_ => returns the actual points as int
      * _addPoints(int)_ => add's points from a race
   3. Create class `CompetitorsList` storing `Competitor`:

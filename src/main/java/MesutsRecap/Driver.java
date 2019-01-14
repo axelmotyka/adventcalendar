@@ -10,6 +10,7 @@ public class Driver {
 
   // Constructor of the class Driver: Dies ist der Konstruktor dieser Klasse, um damit Instanzen von Objekten dieser Klasse zu erzeugen.
   // Damit werden Driver/Fahrer generiert.
+  // MERKE: Constructor haben immer die Namen der Klasse! Hier ist der Name des Constructors "Driver".
   public Driver(String firstname, String lastname, int startingNumber) {
     this.firstname = firstname;
     this.lastname = lastname;
@@ -49,5 +50,7 @@ public class Driver {
   public static void main(String[] args) {
     Driver myFirstDriver = new Driver("Super", "Mario", 4);
     System.out.println(myFirstDriver);
+    System.out.println("(" + myFirstDriver.startingNumber + ")");
+    System.out.println(myFirstDriver.firstname + " " + myFirstDriver.lastname);
   }
 }
