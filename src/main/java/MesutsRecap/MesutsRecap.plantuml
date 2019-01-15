@@ -29,11 +29,11 @@ title __MESUTSRECAP's Class Diagram__\n
 
   package MesutsRecap {
     class CompetitorsGenerator {
-        - startingNumber : int
+        {static} - startingNumber : int
         - drivers : List<String>
         - vehicles : List<String>
-        - getRandomDriver()
-        - getRandomVehicle()
+        + getRandomDriver()
+        + getRandomVehicle()
         + getRandomCompetitor()
         {static} + main()
     }
@@ -88,6 +88,26 @@ title __MESUTSRECAP's Class Diagram__\n
       green
       blue
       magenta
+    }
+  }
+  
+
+  package MesutsRecap {
+    class Race {
+        - startingLineUp : List<Competitor>
+        + Race()
+        + addCompetitor()
+        + generateStartingLineup()
+        + getCompetitors()
+        + getStartingLineup()
+        + toString()
+    }
+  }
+  
+
+  package MesutsRecap {
+    class RacingGame {
+        {static} + main()
     }
   }
   
@@ -157,6 +177,7 @@ title __MESUTSRECAP's Class Diagram__\n
   Motorcycle o-- MotorcyleType : type
   Motorcycle +-down- MotorcyleType
   Motorcycle +-down- ColorType
+  Race o-- CompetitorList : competitors
   Tractor -up-|> Vehicle
   Tractor o-- TractorType : type
   Tractor o-- TractorSize : size
