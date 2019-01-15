@@ -19,7 +19,7 @@ public class CompetitorsGenerator {
 
   // Getter method vom Typ Driver:
   // get(int index): Returns the element at the specified position in this list.
-  private Driver getRandomDriver() {
+  public Driver getRandomDriver() {
     List<String> driverNamesFirst = Arrays.asList("Super", "Funny", "Amazing", "Yoshi", "Don", "Bad", "Wopper", "Tiny");
     List<String> driverNamesLast = Arrays.asList("Mario", "Luigi", "Peach", "Abayashi", "Toad", "Bowser", "Wario", "Daisy");
     Random rand = new Random();
@@ -32,7 +32,7 @@ public class CompetitorsGenerator {
 
   // Getter method vom Typ Vehicle:
   // get(int index): Returns the element at the specified position in this list.
-  private Vehicle getRandomVehicle() {
+  public Vehicle getRandomVehicle() {
     List<String> manufacturer = Arrays.asList("Dodge", "Ford", "Plymouth", "Chevrolet");
     List<String> name = Arrays.asList("Challenger", "Mustang", "RoadRunner", "Camaro");
     List<Integer> horsepower = Arrays.asList(340, 400, 323, 395);
