@@ -47,7 +47,8 @@ public class RacingGame {
     // public Race(List<Competitor> competitors)
     //List       <Competitor>
     //Competitor List
-    Race myFirstRace = new Race(newList);
+    Race myRace = new Race(newList);
+
 
 
   }

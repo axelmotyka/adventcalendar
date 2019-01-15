@@ -46,7 +46,7 @@ public class CompetitorsGenerator {
      *
      */
 
-    // Nachfolgend dasselbe wie oben: List<String> name = Arrays.asList( ... )
+    // Die folgenden Zeilen bewirken dasselbe wie der Code oben: List<String> name = Arrays.asList( ... )
     //    ArrayList<String> name = new ArrayList<>();
     //    name.add("Challenger");
     //    name.add("Mustang");
