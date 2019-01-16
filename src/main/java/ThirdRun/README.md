@@ -35,12 +35,12 @@ https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml
 
 Implement basic class lineup.
 
- 1. Define Class `Driver` with following methods: (DONE)
+ 1. Define Class `Driver` with following methods:
     * _Constructor_ => All needed attributes 
     * _getName()_ => returns Lastname, Firstname as String
     * _getStartingNumber()_ => returns the starting number as an int
     * _toString()_ => generates a String like '(1) Joe Cewl' 
- 2. Define Class `Vehicle` with following  methods: (DONE)
+ 2. Define Class `Vehicle` with following  methods:
     * _Constructor_ => All needed attributes
     * _getManufacturer()_ - returns the manufacturer like 'Skoda' as String
     * _getName()_ - returns the vehicle name like 'Fabia' as String
@@ -54,8 +54,8 @@ Implement basic class lineup.
 
 Implement different types of vehicle.
  
- 1. Derive different types of vehicles from the base class `Vehicle`, like a _motorcycle_ or a _trike_. (DONE)
- 2. Add specific attributes to each of the new derived classes. (DONE)
+ 1. Derive different types of vehicles from the base class `Vehicle`, like a _motorcycle_ or a _trike_.
+ 2. Add specific attributes to each of the new derived classes.
  4. Add get methods for the new attributes
  5. Enhance toString() method with the new attributes 
  3. Visualize created classes with plantuml as class diagram, inclusive associations.
@@ -64,16 +64,16 @@ Implement different types of vehicle.
  
  Generate a CompetitorsList which holds a Competitor with a Driver and Vehicle.
   
-  1. Create class `CompetitorsGenerator`, which randomly generates drivers and related vehicles as a `Competitor`. (DONE)
-  2. Create class `Competitor` storing the assigment of the derived classes of `Vehicle` and `Driver` with: (DONE)
+  1. Create class `CompetitorsGenerator`, which randomly generates drivers and related vehicles as a `Competitor`.
+  2. Create class `Competitor` storing the assigment of the derived classes of `Vehicle` and `Driver` with:
      * _getPoints()_ => returns the actual points as int
      * _addPoints(int)_ => add's points from a race
-  3. Create class `CompetitorsList` storing `Competitor`: (DONE)
+  3. Create class `CompetitorsList` storing `Competitor`:
      * _addCompetitor(Competitor competitor)_
      * _getCompetitors()_ => which returns a list of `Competitor`
      * _toString()_ => method, which concatenate the contained toString() methods. This will generate a String like '[Points] [Driver] [Vehicle]'
   4. Add useful unit tests
-  5. Visualize created classes with plantuml as class diagram, inclusive associations. (DONE)
+  5. Visualize created classes with plantuml as class diagram, inclusive associations.
   
 ### Exercise 14 - Racing game lineup
   

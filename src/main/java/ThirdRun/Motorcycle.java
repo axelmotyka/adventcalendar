@@ -43,7 +43,7 @@ public class Motorcycle extends Vehicle {
   // METHODS
   @Override
   public String toString() {
-    return getVehicleText() + " " + getMotorcycleType() + ", " + getMotorcycleColor() + ", " + getExtraEquipement();
+    return getVehicleText() + " " + getMotorcycleType() + ", " + motorcycleColor + ", " + getExtraEquipement();
   }
 
 }
