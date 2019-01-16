@@ -48,8 +48,18 @@ public class RacingGame {
     //List       <Competitor>
     //Competitor List
     Race myRace = new Race(newList);
+    System.out.println("Unsorted competitor/race list: ");
+    System.out.println(myRace);
 
+    System.out.println("");
+    System.out.println("StartingLineUp: ");
+    myRace.generateStartingLineup();
+    System.out.println(myRace.getStartingLineUp());
 
+    System.out.println("");
+    System.out.println("Race Result: ");
+    myRace.race();
+    System.out.println(myRace.getResult());
 
   }
 }

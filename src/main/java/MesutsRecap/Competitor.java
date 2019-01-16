@@ -39,13 +39,14 @@ public class Competitor {
   @Override
   public String toString() {
     //[Points] [Driver] [Vehicle]
-    return "" + points + " " + driver.getFirstname() + " " + driver.getLastname() + " (" + driver.getStartingNumber() + ") " + vehicle.getName();
+    return "" + points + " " + driver.getFirstname() + " " + driver.getLastname() + " (" + driver.getStartingNumber() +
+            ") " + vehicle.getManufacturer() + " " + vehicle.getName();
   }
 
   // Die main-Methode zu Testzwecken. Daher nicht weiter beachten, evtl. später auskommentieren.
   public static void main(String[] args){
-    Driver d = new Driver("First", "Last", 4);
-    Vehicle h = new Vehicle("Manu", "Name", 755, Vehicle.EngineType.gasoline);
+    Driver d = new Driver("Michael", "Schumacher", 17);
+    Vehicle h = new Vehicle("Ford", "GT500", 755, Vehicle.EngineType.gasoline);
     Competitor competitor = new Competitor(d, h);
     System.out.println(competitor);
   }
