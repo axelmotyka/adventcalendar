@@ -18,7 +18,7 @@ public class Driver {
   }
 
   public String getName() {
-    return getFirstName() + getLastName();
+    return getFirstName() + " " + getLastName();
   }
 
   public int getStartingNumber() {

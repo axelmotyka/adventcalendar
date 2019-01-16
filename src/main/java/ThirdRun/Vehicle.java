@@ -32,14 +32,14 @@ public class Vehicle {
   }
 
   public String getVehicleText() {
-    vehicleText = getManufacturer() + " " + getModel() + ", " + getEngineType() + " " + getHorsepower();
+    vehicleText = getManufacturer() + " " + getModel() + ", " + getEngineType() + ", " + getHorsepower() + "hsp";
     return vehicleText;
   }
 
   // CONSTRUCTOR
-  public Vehicle(String manufacturer, String modelname, int horsepower, EngineType engineType) {
+  public Vehicle(String manufacturer, String model, int horsepower, EngineType engineType) {
     this.manufacturer = manufacturer;
-    this.model = modelname;
+    this.model = model;
     this.horsepower = horsepower;
     this.engineType = engineType;
   }
@@ -50,7 +50,8 @@ public class Vehicle {
   }
 }
 
-/*
+
+/* Exercise11
 Implement basic class lineup.
 
  1. Define Class `Driver` with following methods: (DONE)
