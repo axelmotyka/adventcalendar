@@ -7,9 +7,11 @@ package week02.exercise13;
  */
 
 public class Competitor {
+
   private Driver driver;
   private Vehicle vehicle;
   private int points;
+
   public Competitor(Driver driver, Vehicle vehicle) {
     this.driver = driver;
     this.vehicle = vehicle;

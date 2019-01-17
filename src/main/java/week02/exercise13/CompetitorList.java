@@ -8,8 +8,8 @@ public class CompetitorList {
 
   public void addCompetitor(Competitor competitor) {
     competitors.add(competitor);
-
   }
+
   public List<Competitor> getCompetitors() {
     return competitors;
   }

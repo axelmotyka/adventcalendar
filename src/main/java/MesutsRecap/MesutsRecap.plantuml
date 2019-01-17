@@ -69,7 +69,7 @@ title __MESUTSRECAP's Class Diagram__\n
   
 
   package MesutsRecap {
-    enum MotorcyleType {
+    enum MotorcycleType {
       Allrounder
       Chopper
       Dirtbike
@@ -95,11 +95,14 @@ title __MESUTSRECAP's Class Diagram__\n
   package MesutsRecap {
     class Race {
         - startingLineUp : List<Competitor>
+        - raceResult : List<Competitor>
         + Race()
         + addCompetitor()
         + generateStartingLineup()
+        + race()
         + getCompetitors()
-        + getStartingLineup()
+        + getStartingLineUp()
+        + getResult()
         + toString()
     }
   }
@@ -174,8 +177,8 @@ title __MESUTSRECAP's Class Diagram__\n
   Competitor o-- Vehicle : vehicle
   Motorcycle -up-|> Vehicle
   Motorcycle o-- ColorType : color
-  Motorcycle o-- MotorcyleType : type
-  Motorcycle +-down- MotorcyleType
+  Motorcycle o-- MotorcycleType : type
+  Motorcycle +-down- MotorcycleType
   Motorcycle +-down- ColorType
   Race o-- CompetitorList : competitors
   Tractor -up-|> Vehicle

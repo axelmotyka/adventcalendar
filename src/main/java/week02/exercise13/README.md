@@ -7,7 +7,7 @@
      * _getPoints()_ => returns the actual points as int
      * _addPoints(int)_ => add's points from a race
   3. Create class `CompetitorsList` storing `Competitor`:
-     * _addCompetitor(Competitor competitor)_
+     * _addCompetitor(Competitor competitors)_
      * _getCompetitors()_ => which returns a list of `Competitor`
      * _toString()_ => method, which concatenate the contained toString() methods. This will generate a String like '[Points] [Driver] [Vehicle]'
   4. Add useful unit tests

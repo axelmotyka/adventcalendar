@@ -57,13 +57,13 @@ public class Race {
     for (int place = 0; place < raceResult.size(); place++) {
       int points = 0;
       if (place == 0) {
-        points = (raceResult.size() - place + 1) * 2;
+        points = (raceResult.size() - place + 1) * 2; // (Count of drivers - place + 1) * 2, erster bekommt 2fache points
       } else {
-        points = raceResult.size() - place + 1;
+        points = raceResult.size() - place + 1; // (Count of drivers - place + 1) * 1, alle anderen bekommen
       }
       raceResult.get(place).setPoints(points);
     }
-    startingLineUp = raceResult;
+    startingLineUp = raceResult; // The next starting lineup is the same as the drivers last race position.
   }
 
   // GETTER METHODS

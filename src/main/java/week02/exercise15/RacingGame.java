@@ -1,7 +1,5 @@
 package week02.exercise15;
 
-import java.util.Random;
-
 public class RacingGame {
     public RacingGame() {
 

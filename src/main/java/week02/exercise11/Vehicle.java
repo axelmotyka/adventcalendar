@@ -2,6 +2,7 @@ package week02.exercise11;
 
 
 public class Vehicle {
+
   public enum EngineType {
     electric,
     diesel,

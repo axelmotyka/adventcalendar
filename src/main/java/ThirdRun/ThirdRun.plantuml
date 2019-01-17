@@ -3,6 +3,39 @@
 title __THIRDRUN's Class Diagram__\n
 
   package ThirdRun {
+    class Competitor {
+        - points : int
+        + Competitor()
+        + getDriver()
+        + getVehicle()
+        + getPoints()
+        + setPoints()
+        + toString()
+    }
+  }
+  
+
+  package ThirdRun {
+    class CompetitorList {
+        - competitors : List<Competitor>
+        + addCompetitor()
+        + getCompetitors()
+        + toString()
+    }
+  }
+  
+
+  package ThirdRun {
+    class CompetitorsGenerator {
+        {static} - startingNumber : int
+        - getRandomDriver()
+        - getRandomVehicle()
+        + getRandomCompetitor()
+    }
+  }
+  
+
+  package ThirdRun {
     class Driver {
         - firstName : String
         - lastName : String
@@ -56,6 +89,21 @@ title __THIRDRUN's Class Diagram__\n
       metallic
       bubblegum
       dirty
+    }
+  }
+  
+
+  package ThirdRun {
+    class Race {
+        - startingLineUP : List<Competitor>
+        - raceResult : List<Competitor>
+        + Race()
+        + generateStartingLineup()
+        + race()
+        + getStartingLineUP()
+        + getCompetitors()
+        + getRaceResult()
+        + toString()
     }
   }
   
@@ -125,11 +173,14 @@ title __THIRDRUN's Class Diagram__\n
   }
   
 
+  Competitor o-- Driver : driver
+  Competitor o-- Vehicle : vehicle
   Motorcycle -up-|> Vehicle
   Motorcycle o-- MotorcycleType : motorcycleType
   Motorcycle o-- MotorcycleColor : motorcycleColor
   Motorcycle +-down- MotorcycleType
   Motorcycle +-down- MotorcycleColor
+  Race o-- CompetitorList : competitors
   Truck -up-|> Vehicle
   Truck o-- TruckType : truckType
   Truck o-- TruckSize : truckSize

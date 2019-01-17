@@ -42,7 +42,7 @@ public class Tractor extends Vehicle{
 
   @Override
   public String toString() {
-    return getVehicleText() + " " + size + " " + type;
+    return getVehicleText() + " " + size + " " + type; // getVehicleText() method comes from the parent class Vehicle.
   }
 
   public static void main(String[] args) {

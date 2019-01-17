@@ -8,7 +8,7 @@
       * _getStanding()_ => holds the competitors in their actual standing as a List, order this list by:
         * without a race by _drivers last name_, _drivers first name_, _vehicles manufacturer_
         * after a race has happened by the competitors points
-        * Store the placements shift after a race, means if a competitor went places up, down or remained.
+        * Store the placements shift after a race, means if a competitors went places up, down or remained.
       * _toString()_ => the standing as String like '[Place] [Placement shift] [Competitor]'
         * for the shift up &#8593;
         * for shift down &#8595;

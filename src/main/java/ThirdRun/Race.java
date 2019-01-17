@@ -1,8 +1,6 @@
 package ThirdRun;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -14,12 +12,13 @@ public class Race {
   private List<Competitor> raceResult;
 
 
-
-  // CONSTRUCTOR
-  public Race(CompetitorList competitors, List<Competitor> startingLineUP) {
+    // CONSTRUCTOR
+  public Race(CompetitorList competitors) {
     this.competitors = competitors;
-    this.startingLineUP = startingLineUP;
+    this.startingLineUP = new ArrayList<>();
+    this.raceResult = new ArrayList<>();
   }
+
 
   // METHODS
   // NOTE: Lambda function??? --->> Learn!!
@@ -35,6 +34,19 @@ public class Race {
     startingLineUP = personStream.collect(Collectors.toList());
   }
 
+  public void race() {
+    raceResult = new ArrayList<>(startingLineUP);
+    Collections.shuffle(raceResult);
+
+    for (int place = 0; place < raceResult.size(); place++) {
+      int points = 0;
+      if (place == 0) {
+        points = (raceResult.size() - place + 1) * 2;
+      } else points = (raceResult.size() - place + 1) * 1;
+      raceResult.get(place).setPoints(points);
+    }
+    startingLineUP = raceResult;
+  }
 
 
   // GETTER METHODS
@@ -46,6 +58,9 @@ public class Race {
     return competitors;
   }
 
+  public List<Competitor> getRaceResult() {
+    return raceResult;
+  }
 
   @Override
   public String toString() {

@@ -38,7 +38,7 @@ public class CompetitorsGenerator {
     Random rand = new Random();
     String randomManufacturer = manufacturer.get(rand.nextInt(manufacturer.size()));
     String randomName = name.get(rand.nextInt((name.size())));
-    Integer randomHorsepower = horsepower.get(rand.nextInt(horsepower.size()));
+    int randomHorsepower = horsepower.get(rand.nextInt(horsepower.size()));
 
     int randomEngineType = rand.nextInt(3);
     EngineType type;

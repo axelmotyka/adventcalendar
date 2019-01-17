@@ -1,13 +1,13 @@
 package MesutsRecap;
 
-import java.sql.SQLOutput;
-
 public class RacingGame {
 
 
   public static void main(String[] args) {
 
     // Generate and show a driver!
+    // myFirstDriver is an object from the class Driver. When myFirstDriver is printed out, Java will execute the toString() method.
+    // And in the class Driver it is defined, that the toString() method prints out an individual text.
     Driver myFirstDriver = new Driver("Super", "Mario", 4);
     System.out.println(myFirstDriver);
 
@@ -20,7 +20,7 @@ public class RacingGame {
     System.out.println(myFirstTractor);
 
     // Generate and show a motorcycle as a vehicle with inherited parameters (features)!
-    Motorcycle myFirstMotorcycle = new Motorcycle("Kawasaki", "Defender II", 56, Vehicle.EngineType.gasoline, Motorcycle.ColorType.black, Motorcycle.MotorcyleType.Dirtbike);
+    Motorcycle myFirstMotorcycle = new Motorcycle("Kawasaki", "Defender II", 56, Vehicle.EngineType.gasoline, Motorcycle.ColorType.black, Motorcycle.MotorcycleType.Dirtbike);
     System.out.println(myFirstMotorcycle);
 
     // Generate an object from class "CompetitorsGenerator" and name it "cg". Then print out some data from this object:

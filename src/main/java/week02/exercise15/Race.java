@@ -20,7 +20,7 @@ public class Race {
   private List<Competitor> startingLineup = new ArrayList<>();
   private List<Competitor> raceResult = new ArrayList<>();
 
-  // Method "Race" enhanced with the competitors final placement.
+  // Constructor "Race" enhanced with the competitors final placement.
   public Race(CompetitorList list) { // ??? Wie war das nochmals: Eine Methode Race innerhalb Klasse Race???
     this.competitors = list.getCompetitors();
   }
@@ -35,7 +35,6 @@ public class Race {
     // + vehicles manufacturer.
     Comparator<Competitor> comparator = Comparator.comparing(c -> c.getDriver().getName());
     comparator = comparator.thenComparing(c -> c.getVehicle().getManufacturer());
-
 
     // Sort the stream:
     Stream<Competitor> personStream = competitors.stream().sorted(comparator);
@@ -52,8 +51,12 @@ public class Race {
     return startingLineup;
   }
 
+  public List<Competitor> getResult() {
+    return raceResult;
+  }
+
   // The method "race" selects from a list of drivers randomly the drivers final placement. Therefore it gets passed
-  // the randomly generated starting line-up.
+  // the randomly generated starting line-up.run's the race - generate the final placement randomly
   //
   public void race() {
     raceResult = new ArrayList<>(startingLineup);
@@ -71,11 +74,6 @@ public class Race {
       }
       startingLineup = raceResult;
   }
-
-  public List<Competitor> getResult() {
-    return raceResult;
-  }
-
 
   @Override
   public String toString() {
