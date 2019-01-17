@@ -2,7 +2,6 @@ package ThirdRun;
 
 public class Truck extends Vehicle {
 
-
   // NEW DATATYPES
   public enum TruckType {
     Tow_Truck, Box_Truck, Faltbed_Truck;

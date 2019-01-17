@@ -45,6 +45,10 @@ public class Competitor {
     this.points += points;
   }
 
+  @Override
+  public String toString() {
+    return "" + points + "; " + driver.getFirstName() + " " + driver.getLastName() + "; " + vehicle.getManufacturer() + " " + vehicle.getModel() ;
+  }
 }
 
 

@@ -40,7 +40,22 @@ public class RacingGame {
     System.out.println("Truck: " + powerTruck);
     System.out.println("Trucks extra equipement: " + powerTruck.getExtraEquipement());
 
+    // GENERATE A COMPETITOR
+    Competitor competitor = new Competitor(firstDriver, coolMotorcycle, 0);
+    System.out.println(competitor);
 
+
+    CompetitorsGenerator cg = new CompetitorsGenerator();
+
+
+    // GENERATE A COMPETITOR LIST
+    CompetitorList erstesRennen = new CompetitorList();
+    for (int i = 0; i < 8; i++) {
+      Competitor c = cg.getRandomCompetitor();
+      erstesRennen.addCompetitor(c);
+    }
+    erstesRennen.addCompetitor(competitor);
+    System.out.println(erstesRennen);
   }
 
 }
