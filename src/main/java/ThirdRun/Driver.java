@@ -1,5 +1,7 @@
 package ThirdRun;
 
+import java.util.Objects;
+
 public class Driver {
 
   // VARIABLES
@@ -22,7 +24,6 @@ public class Driver {
   }
 
   public int getStartingNumber() {
-    startingNumber++;
     return startingNumber;
   }
 
@@ -30,7 +31,7 @@ public class Driver {
   public Driver(String firstName, String lastName, int startingNumber) {
     this.firstName = firstName;
     this.lastName = lastName;
-    this.startingNumber = 0;
+    this.startingNumber = startingNumber;
     this.driverText = "(" + getStartingNumber() + ")" + " " + getFirstName() + " " + getLastName();
   }
 
@@ -38,6 +39,21 @@ public class Driver {
   @Override
   public String toString() {
     return driverText;
+  }
+
+  @Override
+  public boolean equals(Object other) {
+    if (this == other) return true;
+    if (other == null || getClass() != other.getClass()) return false;
+    Driver driver = (Driver) other;
+    return startingNumber == driver.startingNumber &&
+            Objects.equals(firstName, driver.firstName) &&
+            Objects.equals(lastName, driver.lastName);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(firstName, lastName, startingNumber);
   }
 }
 

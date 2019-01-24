@@ -3,6 +3,7 @@ package ThirdRun;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 // This class allows to generate an object competitor storing the assignment of the derived classes of "Vehicle" and "Driver"
 
@@ -12,12 +13,14 @@ public class Competitor {
   private Driver driver;
   private Vehicle vehicle;
   private int points;
+  private int uniqueID;
 
   // CONSTRUCTOR
-  public Competitor(Driver driver, Vehicle vehicle, int points) {
+  public Competitor(Driver driver, Vehicle vehicle, int points, int uniqueID) {
     this.driver = driver;
     this.vehicle = vehicle;
-    this.points = points = 0;
+    this.points = points;
+    this.uniqueID = uniqueID;
   }
 
   // GETTER METHODS
@@ -45,9 +48,24 @@ public class Competitor {
     this.points += points;
   }
 
+  // OVERRIDE EQUALS AND HASH-CODE
+  @Override
+  public boolean equals(Object other) {
+    if (this == other) return true;
+    if (other == null || getClass() != other.getClass()) return false;
+    Competitor that = (Competitor) other;
+    return uniqueID == that.uniqueID;
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(uniqueID);
+  }
+
+  // OVERRIDE TO-STRING
   @Override
   public String toString() {
-    return "" + points + "; " + driver.getFirstName() + " " + driver.getLastName() + "; " + vehicle.getManufacturer() + " " + vehicle.getModel() ;
+    return "" + points + " - " + driver.getFirstName() + " " + driver.getLastName() ;
   }
 }
 

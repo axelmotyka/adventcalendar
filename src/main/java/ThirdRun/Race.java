@@ -7,14 +7,18 @@ import java.util.stream.Stream;
 public class Race {
 
   // VARIABLES
-  private CompetitorList competitors;
+  private List<Competitor> competitors;
   private List<Competitor> startingLineUP;
   private List<Competitor> raceResult;
+  public int raceNumber;
+  public int amountOfRaces;
 
 
-    // CONSTRUCTOR
-  public Race(CompetitorList competitors) {
+  // CONSTRUCTOR
+  public Race(List<Competitor> competitors, int raceNumber, int amountOfRaces) {
     this.competitors = competitors;
+    this.raceNumber = raceNumber;
+    this.amountOfRaces = amountOfRaces;
     this.startingLineUP = new ArrayList<>();
     this.raceResult = new ArrayList<>();
   }
@@ -22,17 +26,18 @@ public class Race {
 
   // METHODS
   // NOTE: Lambda function??? --->> Learn!!
-  public void generateStartingLineup(){
+  public void generateStartingLineup() {
     Comparator<Competitor> comparator = Comparator.comparing(c -> c.getDriver().getLastName());
     comparator = comparator.thenComparing(c -> c.getDriver().getFirstName());
     comparator = comparator.thenComparing(c -> c.getVehicle().getManufacturer());
 
     // Sort the stream:
-    Stream<Competitor> personStream = competitors.getCompetitors().stream().sorted(comparator);
+    Stream<Competitor> personStream = competitors.stream().sorted(comparator);
 
     // Make sure that the output is as expected:
     startingLineUP = personStream.collect(Collectors.toList());
   }
+
 
   public void race() {
     raceResult = new ArrayList<>(startingLineUP);
@@ -45,7 +50,7 @@ public class Race {
       } else points = (raceResult.size() - place + 1) * 1;
       raceResult.get(place).setPoints(points);
     }
-    startingLineUP = raceResult;
+    startingLineUP = new ArrayList<>(raceResult);
   }
 
 
@@ -54,7 +59,7 @@ public class Race {
     return startingLineUP;
   }
 
-  public CompetitorList getCompetitors() {
+  public List<Competitor> getCompetitors() {
     return competitors;
   }
 
@@ -65,9 +70,9 @@ public class Race {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    List<Competitor> niceCompetitors = competitors.getCompetitors();
+    List<Competitor> niceCompetitors = competitors;
     for (Competitor competitor : niceCompetitors) {
-      sb.append("" + (niceCompetitors.indexOf(competitor) +1) + " " + competitor.getDriver() + "; ");
+      sb.append("" + (niceCompetitors.indexOf(competitor) + 1) + " " + competitor.getDriver() + "; ");
     }
     return sb.toString();
   }

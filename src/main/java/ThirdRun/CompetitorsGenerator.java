@@ -86,8 +86,9 @@ public class CompetitorsGenerator {
   public Competitor getRandomCompetitor() {
     Driver driver = getRandomDriver();
     Vehicle vehicle = getRandomVehicle();
+    int uniqueID = startingNumber;
 
-    return new Competitor(driver, vehicle, 0);
+    return new Competitor(driver, vehicle, 0, uniqueID);
   }
 
 
